@@ -1,0 +1,32 @@
+
+{% set class = "md-tabs__link" %}
+{% if nav_item.active %}
+  {% set class = class ~ " md-tabs__link--active" %}
+{% endif %}
+{% if nav_item.children %}
+  {% set title = title | d(nav_item.title) %}
+  {% set nav_item = nav_item.children | first %}
+  {% if nav_item.children %}
+    {% include "partials/tabs-item.html" %}
+  {% else %}
+    <li class="md-tabs__item">
+      <a class="{{ class }}">
+        {{ title }}
+      </a>
+      <div class="md-tabs__item-content">
+        <a href="{{ nav_item.url | url }}../options/" class="{{ class }}">
+          Options
+        </a>
+        <a href="{{ nav_item.url | url }}../commands/" class="{{ class }}">
+          Commands
+        </a>
+      </div>
+    </li>
+  {% endif %}
+{% else %}
+  <li class="md-tabs__item">
+    <a href="{{ nav_item.url | url }}" class="{{ class }}">
+      {{ nav_item.title }}
+    </a>
+  </li>
+{% endif %}

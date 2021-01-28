@@ -1,0 +1,707 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../favicon-32x32.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+    
+    
+      
+        <title>Specifications - Aeon Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:300,400,400i,700%7CCourier&display=fallback">
+        <style>body,input{font-family:"Ubuntu Mono",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Courier",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#specifications" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Aeon Documentation" class="md-header-nav__button md-logo" aria-label="Aeon Documentation">
+      
+  <img src="../../ae-coin.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Aeon Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Specifications
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../../documentation/aeond/options/" class="md-tabs__link">
+        aeond
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../../documentation/wallet-cli/options/" class="md-tabs__link">
+        Wallet CLI
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../../documentation/wallet-rpc/options/" class="md-tabs__link">
+        Wallet RPC
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Aeon Documentation" class="md-nav__button md-logo" aria-label="Aeon Documentation">
+      
+  <img src="../../ae-coin.svg" alt="logo">
+
+    </a>
+    Aeon Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
+    <label class="md-nav__link" for="nav-1">
+      aeond
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="aeond" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        aeond
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documentation/aeond/options/" class="md-nav__link">
+      Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documentation/aeond/commands/" class="md-nav__link">
+      Commands
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <label class="md-nav__link" for="nav-2">
+      Wallet CLI
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Wallet CLI" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Wallet CLI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documentation/wallet-cli/options/" class="md-nav__link">
+      Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documentation/wallet-cli/commands/" class="md-nav__link">
+      Commands
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      Wallet RPC
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Wallet RPC" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Wallet RPC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documentation/wallet-rpc/options/" class="md-nav__link">
+      Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documentation/wallet-rpc/commands/" class="md-nav__link">
+      Commands
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aeon-technical-information" class="md-nav__link">
+    AEON Technical Information
+  </a>
+  
+    <nav class="md-nav" aria-label="AEON Technical Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#achieving-trustless-transactions" class="md-nav__link">
+    Achieving Trustless Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#achieving-anonymous-transactions" class="md-nav__link">
+    Achieving Anonymous Transactions
+  </a>
+  
+    <nav class="md-nav" aria-label="Achieving Anonymous Transactions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-time-use-keys" class="md-nav__link">
+    One-Time-Use Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-time-ring-signatures" class="md-nav__link">
+    One-Time Ring Signatures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-weaknesses" class="md-nav__link">
+    Known Weaknesses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coin-minting-process" class="md-nav__link">
+    Coin Minting Process
+  </a>
+  
+    <nav class="md-nav" aria-label="Coin Minting Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#block-creation" class="md-nav__link">
+    Block Creation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-time-interval" class="md-nav__link">
+    Block Time Interval
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-reward" class="md-nav__link">
+    Block Reward
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaction-fees" class="md-nav__link">
+    Transaction Fees
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="specifications">Specifications</h1>
+<h2 id="summary">Summary</h2>
+<ul>
+  <li>PoW algorithm: KangarooTwelve</li>
+  <li>Max supply: ~18.4 million</li>
+  <li>Block reward: smoothly decreasing</li>
+  <li>Block time: 240 seconds</li>
+  <li>Difficulty: retargets at every block</li>
+</ul>
+<ul class="steps-list">
+  <li>
+    <h4>ASIC-friendly proof-of-work</h4>
+    <p>We believe ASIC resistance is ultimately futile while imposing various forms of undesirable cost. Our ASIC-friendly PoW (KangarooTwelve) allows for faster verification of the blockchain. This also helps stabilize the protocol as the need for PoW-change hard forks is eliminated.</p>
+  </li>
+  <li>
+    <h4>No use of RingCT</h4>
+    <p>Monero's RingCT for encrypting transaction amounts comes with a theoretical risk of catastrophic collapse of the monetary system due to hidden inflation if the discrete log of the second generator is discovered. Favoring supply soundness over privacy, we choose not to use RingCT until cryptographers invent an efficient commitment scheme with unconditional soundness. We believe practical level of privacy can still be achieved without RingCT. Not using RingCT also contributes to faster syncing.</p>
+  </li>
+  <li>
+    <h4>Smaller Blockchain</h4>
+    <p>AEON's block time is 4 minutes. This halves the number of blocks produced each day compared to Monero, further reducing the cost of running a node. Additionally, AEON's ring size is fixed to 3 which is the bare minimum needed to prevent chain reactions (<a href="https://lab.getmonero.org/pubs/MRL-0001.pdf">link</a>). Monero's higher ring size means more degree of obfuscation for each transaction, but it also comes at the cost of increased blockchain size and longer verification time. We choose to stick with ring size 3 until a convincing evidence against it is found.</p>
+  </li>
+</ul>
+
+<h2 id="aeon-technical-information">AEON Technical Information</h2>
+<p>The implementation of AEON is derived from two other open source projects:  <b>CryptoNote</b> and <b>Monero</b>.</p>
+
+<p>The CryptoNote technology focuses on the ability to create crypto-currencies with untraceable transactions, CPU-friendly proof-of-work algorithm, and the ability of self-adjusting parameters such as block size and difficulty. Several crypto coins have been based on the CryptoNote technology.</p>
+
+<p>Monero is one of the earliest crypto currencies to use the features of CryptoNote, and has grown to be the most popular with a market cap well within the top 20 crypto coins.  AEON was started from the Monero code base, and modified only in ways that meet the specific vision and goals of the AEON community.</p>
+
+<h3 id="achieving-trustless-transactions">Achieving Trustless Transactions</h3>
+<p>One of the goals for AEON transactions is to have the properties of <i>physical cash</i> payments, as opposed to electronic payments.</p>
+
+<p>Consider the example of paying for a meal at a restaurant. With electronic payment (i.e. a credit card), there is a trusted 3rd party (i.e. Visa) which carries out the transaction for the payer and receiver. The trusted party must know both the payer's and receiver's identities and account information to settle the transaction. Additionally, the receiver may also receive the payer's name and partial account information.</p>
+
+<p>In contrast, paying for a meal with cash is <i>trustless</i> (requires no trusted 3rd party to carry out the transaction). It is also <i>anonymous</i> in that it does not require the payer to give their name or any other personal information to the receiver.</p>
+
+<p>To achieve trustless, decentralized transactions, AEON utilizes a proof of work “mining" process.  For a definition of PoW, the <a href="https://en.bitcoin.it/wiki/Proof_of_work">Bitcoin Wiki</a> offers this:</p>
+
+<p>"A <b>proof of work</b> is a piece of data which is difficult (costly, time-consuming) to produce but easy for others to verify and which satisfies certain requirements. Producing a proof of work can be a random process with low probability so that a lot of trial and error is required <i>on average</i> before a valid proof of work is generated."</p>
+
+<p>The goal of the proof of work process, is to provide decentralization of both the distribution of coins and the validation of transactions. The difficult trial-and-error nature of producing the PoW is an effective means of randomizing which miner will create and correctly validate the next block of transactions, and receive the reward of new coins. This randomization ensures that the processing of transactions is spread indiscriminately over the entire network.</p>
+
+<p>A disadvantage of the PoW function for many cryptocurrencies (including Bitcoin) is that it relies solely on processor speed, which allows high-end GPU's and specialized mining hardware (ASICs) to have a great advantage in producing the correct proof of work. This condition leaves the majority of PC owners unable to participate in the mining process for coins, and creates an environment where relatively few miners control the network.  Thus, the goal of decentralization is somewhat defeated.</p>
+
+<p>An improved PoW algorithm, eventually called CryptoNight, was proposed in 2012 by the CryptoNote project. According to the <a href="https://cryptonote.org/whitepaper.pdf">CryptoNote whitepaper</a>:</p>
+
+<p>“Our primary goal is to close the gap between CPU (majority) and GPU/FPGA/ASIC (minority) miners. It is appropriate that some users can have a certain advantage over others, but their investments should grow at least linearly with the power. More generally, producing special-purpose devices has to be as less profitable as possible."</p>
+
+<p>The CryptoNight algorithm accomplishes this goal in 2 primary ways.</p>
+
+<ul>
+<li>It uses built-in CPU instructions, which are difficult to implement in specialized hardware.</li>
+<li>It relies on access to unpredictable locations in a 2 MB “scratchpad" of CPU memory, rather than relying solely on CPU processing speed.</li>
+</ul>
+<p>These factors effectively limit the advantages of GPU's over CPU's and make it too costly to produce specialized ASIC hardware for mining.</p>
+
+<p>For its proof of work, AEON implements a variation of this algorithm, called  <b>CryptoNight-Lite</b>. As the name suggests, this is a lightweight version of the original algorithm, which utilizes a 1 MB scratchpad.  This results in half the iterations needed to compute a hash, and half the required L3 cache CPU memory.  Many lower end processors (on mobile devices) will have the required 1 MB of CPU cache, and multi-core CPU processors will see up to a 4X performance boost over the heavier CryptoNight algorithm.</p>
+
+<h3 id="achieving-anonymous-transactions">Achieving Anonymous Transactions</h3>
+<p>The previous section explained how the PoW algorithm creates a decentralized trustless network of miners to process transactions.  To achieve anonymity, the payer's and receiver's identities and account (wallet) information must be kept hidden on the public blockchain.</p>
+
+<h4 id="one-time-use-keys">One-Time-Use Keys</h4>
+<p>AEON uses the CryptoNote solution to receive payments at a one-time-use public key address, rather than the recipient's public wallet address.  The public key is generated by the sender, using both the recipient's public wallet address and some random data.  Once generated, funds are sent directly to this public key, which can be used only once.  The recipient can later spend any received coins, by using a one-time-use private key (called a <b>ring signature</b>) which corresponds to the one-time public key.</p>
+
+<p>The following picture, from the CryptoNote whitepaper, shows that the one-time public keys are never linked to the receiver's public wallet address on the blockchain.  This effectively keeps the receiving wallet anonymous.</p>
+
+<p><img src="OneTimeUseKey2.png"></p>
+<h4 id="one-time-ring-signatures">One-Time Ring Signatures</h4>
+<p>After funds are received via a one-time public key, the recipient is able to spend the funds at any time, using a one-time ring signature.  The goal of the ring signature is to keep the sending address anonymous on the blockchain.</p>
+
+<p>In non-private implementations, the sender will “sign" their payment transaction with a private key that can be validated only by using the sender's corresponding public key.  Only the sender knows the private key, but the whole world can see that the sender's public key was used to validate the transaction.</p>
+
+<p>The idea behind the ring signature is straightforward:  a sender produces a signature which can be validated by a <i>set</i> of public keys rather than a unique public key.  The identity of the one who produced the signature is indistinguishable from the owners of the additional public keys within the set.</p>
+
+<p>Consider an example:  Bob wishes to send 5 AEON to Kim.  The picture below shows the ring signature concept for this transaction on the blockchain, using a default ring size of 3.</p>
+
+<p><img src="RingSignature2.png"></p>
+<p>Note in the example, that the 2 “decoy" public signatures are actually past transaction outputs that are pulled from the AEON blockchain. Thus, all 3 inputs in the set are valid signed inputs for 5 AEON, but only Bob's is valid for <i>this</i> transaction.  It is impossible for someone looking at this transaction on the blockchain to determine which of the 3 inputs was the valid one.  Additionally, all 3 of the inputs will likely show up as decoys in multiple other transactions.</p>
+
+<p>In the AEON blockchain, the total number of inputs, known as the <b>ring size</b>, is set to 3 by default. The sender may choose a different ring size for their transaction, and the selection of each decoy input is handled automatically by AEON. More than 3 inputs will result in a higher level of anonymity, but will require a higher transaction fee.</p>
+
+<p>For non-sensitive transactions to be processed with a slightly lower fee, a ring size of 1 can be chosen.  To preserve overall blockchain anonymity the number of such transactions is limited to no more than 10% of the transactions in each block.  Additionally, a ring size of 2 is not allowed since it does not provide a high enough assurance against blockchain analysis.</p>
+
+<h4 id="known-weaknesses">Known Weaknesses</h4>
+<p>One possible attack against Anonymity is analysis based on the amounts sent in a transaction. If a bad actor knows, for example, that 0.9 coins have been sent at a certain time, then they may search for transactions containing 0.9 coins to attempt to identify a sender.  This is negated by the use of one-time keys and other factors, but the visibility of the amounts on the blockchain is a downside.</p>
+
+<p>Furthermore, as seen in the illustration in the previous section, the ring signature approach requires the specific amount of each of the inputs to match.  For less common amounts, there will be fewer public keys available for decoys, reducing the level of anonymity.</p>
+
+<p>The Monero development team has created a solution for these weaknesses, known as <b>Ring Confidential Transactions</b> (RingCT), which will obscure transaction amounts on the blockchain.  The AEON community plans to adopt this solution as soon as it can be incorporated by the development team.  There are more details on the new RingCT protocol in the Monero publication <a href="https://lab.getmonero.org/pubs/MRL-0005.pdf">Ring Confidential Transactions</a>.</p>
+
+<h3 id="coin-minting-process">Coin Minting Process</h3>
+<p>As mentioned in the section <i>Achieving Trustless Transactions</i>, new AEON coins are distributed over time, to mining applications (called <b>nodes</b>), as a reward for calculating the correct Proof Of Work. This section will focus on the details of the coin distribution process.</p>
+
+<h4 id="block-creation">Block Creation</h4>
+<p>One of the main functions of the mining node is to validate transactions as they are submitted to the network. For a transaction to be valid, it must pass several checks. The transaction must be properly formatted. The coins being spent must be “signed" by the valid owner of the coins. And the coins being spent must not have already been spent by their owner in a previous transaction (a <b>double spend</b>). As the node receives and validates transactions, it places them together in a collection, called a <b>block</b>.</p>
+
+<p>As mentioned earlier in this paper, AEON implements an algorithm to automatically adjust the allowed block size up or down, based on the previous 100 blocks.  This effectively allows miners to include more transactions in each block when the network transaction rate requires it. Miners are not allowed to increase their block size indiscriminately, and are assessed a <b>reward penalty</b> if they create a block larger than the median size. Twice the median size is the largest block allowed. The reward penalty is calculated by the following formula:</p>
+
+<p><img src="eqRewardPenalty.png"></p>
+<p>where</p>
+
+<p><img src="eq2RewardPenalty.png"></p>
+<p>Governing the block size is necessary, to keep the transaction processing speed uniform across all nodes in the network.</p>
+
+<h4 id="block-time-interval">Block Time Interval</h4>
+<p>A single block of AEON transactions is added to the public blockchain once every 4 minutes, <i>on average</i>.  This timing must be ensured by constantly adjusting the <i>difficulty</i> of the Proof Of Work calculation.  Otherwise the addition of more miners to the network would result in calculating the correct PoW faster than the desired 4 minutes.</p>
+
+<p>After a mining node assembles a single block of valid transactions, it races with other nodes to calculate the correct PoW. The node which calculates the correct PoW will broadcast its block to the other nodes it knows about, and they will also validate the entire block of transactions. Each node that accepts the block as valid will add the block to its copy of the public AEON blockchain, then broadcast the block to other nodes, and begin assembling a new block.  This continues until all the network nodes add the block.</p>
+
+<h4 id="block-reward">Block Reward</h4>
+<p>When a mining node calculates a correct PoW and adds a block to the blockchain, it includes a transaction of new coins, paid to its own mining wallet.  This payment of new coins is known as the <b>block reward</b>. The number of coins in the block reward decreases with each block on a smooth curve, known as the <b>emission curve</b>. Each reward is calculated based on the following formula:</p>
+
+<p><img src="eqBlockReward.png"></p>
+<p>where</p>
+
+<p><img src="eq2BlockReward.png"></p>
+<p>Since the current supply of coins (A) increases with every new block, each successive reward will decrease by a small fraction of a coin. The reward continues to decrease until it equals 1.2 AEON per block. At that time, the initial emmission curve will end, and the <b>tail emission</b> reward (1.2 AEON for each 4 minute block) will begin. The tail is estimated to begin in the July/August timeframe of 2022.</p>
+
+<p>The following graph shows the number of AEON coins rewarded for each block over time.</p>
+
+<p><img src="aeonEmissionCurve2.png"></p>
+<p>Notice that the emission process was modified in 2015, to increase the block creation time from every 1 minute to every 4 minutes. The number of coins paid for each block was also increased by 4 times. This modification greatly reduced the number of block reward transactions on the block chain, while allowing the total number of coins emitted to remain constant.</p>
+
+<p>The following graph shows the total supply of AEON coins over time. Notice that the supply increased smoothly, despite the hard fork mentioned above.</p>
+
+<p><img src="aeonSupplyCurve2.png"></p>
+<p>Note that the tail emission has no defined end, and provides an initial inflation rate of less than 1%. During this phase, the rate of inflation decreases as the supply of coins grows by a constant 157,680 AEON per year. By the year 2030, there will be roughly 19.5 million coins in total.</p>
+
+<h3 id="transaction-fees">Transaction Fees</h3>
+<p>For every transaction, the sender must pay a <b>transaction fee</b> in addition to the coins sent. This fee is paid to the miner who successfully calculates the PoW. Thus, the miner recieves the Block Reward plus the sum of all transaction fees that were included in the block.</p>
+
+<p>The transaction fee will be higher if the sender increases the priority of the transaction. This higher transaction fee will cause the mining nodes to prefer it when selecting transactions for the next block. Therefore, a transaction's priority, and consequently the speed at which it gets processed, is tied directly to its transaction fee.</p>
+
+<p>The transaction fee will also be higher for transactions that contain more data, since the base fee is calculated on a per-kilobyte basis. (This increase does not impact the priority.) The amount of data in a transaction increases in the following scenarios:</p>
+
+<ul>
+<li>The amount sent consists of many small amounts that the sender received</li>
+<li>The sender increases the level of privacy, by requesting a higher ring size than the default</li>
+</ul>
+<p><b>Note on transaction fees, block size, and transaction throughput:</b></p>
+<p>When creating a block of transactions, if the sum of the transaction fees are greater than the block-size penalty, miners are likely to increase the number of transactions in a block. This approach allows the AEON blockchain to self-adjust it's processing speed as transaction traffic changes over time, while also creating a dynamic market for transaction fees.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright 2020 aeon.wiki. <br> Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. <br>You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">apache.org</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://twitter.com/AeonCommunity" target="_blank" rel="noopener" title="\@AeonCommunity" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://aeon-community.medium.com" target="_blank" rel="noopener" title="AEON Community" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/aeonix/aeon" target="_blank" rel="noopener" title="Source Code" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

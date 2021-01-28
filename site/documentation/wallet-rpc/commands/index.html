@@ -1,0 +1,3651 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../favicon-32x32.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+    
+    
+      
+        <title>aeon-wallet-rpc Documentation (Commands) - Aeon Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:300,400,400i,700%7CCourier&display=fallback">
+        <style>body,input{font-family:"Ubuntu Mono",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Courier",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#wallet-rpc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Aeon Documentation" class="md-header-nav__button md-logo" aria-label="Aeon Documentation">
+      
+  <img src="../../../ae-coin.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Aeon Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              aeon-wallet-rpc Documentation (Commands)
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../../aeond/options/" class="md-tabs__link">
+        aeond
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../../wallet-cli/options/" class="md-tabs__link">
+        Wallet CLI
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+        
+      
+      <a href="../options/" class="md-tabs__link md-tabs__link--active">
+        Wallet RPC
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Aeon Documentation" class="md-nav__button md-logo" aria-label="Aeon Documentation">
+      
+  <img src="../../../ae-coin.svg" alt="logo">
+
+    </a>
+    Aeon Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
+    <label class="md-nav__link" for="nav-1">
+      aeond
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="aeond" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        aeond
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aeond/options/" class="md-nav__link">
+      Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aeond/commands/" class="md-nav__link">
+      Commands
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <label class="md-nav__link" for="nav-2">
+      Wallet CLI
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Wallet CLI" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Wallet CLI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallet-cli/options/" class="md-nav__link">
+      Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallet-cli/commands/" class="md-nav__link">
+      Commands
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    <label class="md-nav__link" for="nav-3">
+      Wallet RPC
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Wallet RPC" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Wallet RPC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../options/" class="md-nav__link">
+      Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Commands
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Commands
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wallet-information" class="md-nav__link">
+    Wallet information
+  </a>
+  
+    <nav class="md-nav" aria-label="Wallet information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_balance" class="md-nav__link">
+    get_balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_height" class="md-nav__link">
+    get_height
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start_mining" class="md-nav__link">
+    start_mining
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop_mining" class="md-nav__link">
+    stop_mining
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_languages" class="md-nav__link">
+    get_languages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_wallet" class="md-nav__link">
+    create_wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open_wallet" class="md-nav__link">
+    open_wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#close_wallet" class="md-nav__link">
+    close_wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change_wallet_password" class="md-nav__link">
+    change_wallet_password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate_from_keys" class="md-nav__link">
+    generate_from_keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore_deterministic_wallet" class="md-nav__link">
+    restore_deterministic_wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop_wallet" class="md-nav__link">
+    stop_wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rescan_blockchain" class="md-nav__link">
+    rescan_blockchain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_attribute" class="md-nav__link">
+    set_attribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_attribute" class="md-nav__link">
+    get_attribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make_uri" class="md-nav__link">
+    make_uri
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse_uri" class="md-nav__link">
+    parse_uri
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_address_book_entry" class="md-nav__link">
+    add_address_book_entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_address_book_entry" class="md-nav__link">
+    get_address_book_entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_address_book_entry" class="md-nav__link">
+    delete_address_book_entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rescan_spent" class="md-nav__link">
+    rescan_spent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_version" class="md-nav__link">
+    get_version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#store" class="md-nav__link">
+    store
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh" class="md-nav__link">
+    refresh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_daemon" class="md-nav__link">
+    set_daemon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_log_level" class="md-nav__link">
+    set_log_level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_log_categories" class="md-nav__link">
+    set_log_categories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addresses-and-accounts" class="md-nav__link">
+    Addresses and Accounts
+  </a>
+  
+    <nav class="md-nav" aria-label="Addresses and Accounts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_address" class="md-nav__link">
+    get_address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_address_index" class="md-nav__link">
+    get_address_index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_account_tags" class="md-nav__link">
+    get_account_tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_accounts" class="md-nav__link">
+    get_accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_address" class="md-nav__link">
+    create_address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make_integrated_address" class="md-nav__link">
+    make_integrated_address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split_integrated_address" class="md-nav__link">
+    split_integrated_address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label_address" class="md-nav__link">
+    label_address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_account" class="md-nav__link">
+    create_account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label_account" class="md-nav__link">
+    label_account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tag_accounts" class="md-nav__link">
+    tag_accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#untag_accounts" class="md-nav__link">
+    untag_accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_account_tag_description" class="md-nav__link">
+    set_account_tag_description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate_address" class="md-nav__link">
+    validate_address
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfers" class="md-nav__link">
+    Transfers
+  </a>
+  
+    <nav class="md-nav" aria-label="Transfers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transfer" class="md-nav__link">
+    transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer_split" class="md-nav__link">
+    transfer_split
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign_transfer" class="md-nav__link">
+    sign_transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit_transfer" class="md-nav__link">
+    submit_transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep_dust" class="md-nav__link">
+    sweep_dust
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep_all" class="md-nav__link">
+    sweep_all
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep_single" class="md-nav__link">
+    sweep_single
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relay_tx" class="md-nav__link">
+    relay_tx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_payments" class="md-nav__link">
+    get_payments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_bulk_payments" class="md-nav__link">
+    get_bulk_payments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incoming_transfers" class="md-nav__link">
+    incoming_transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query_key" class="md-nav__link">
+    query_key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_tx_notes" class="md-nav__link">
+    set_tx_notes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_tx_notes" class="md-nav__link">
+    get_tx_notes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_transfers" class="md-nav__link">
+    get_transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_transfer_by_txid" class="md-nav__link">
+    get_transfer_by_txid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_outputs" class="md-nav__link">
+    export_outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_outputs" class="md-nav__link">
+    import_outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_key_images" class="md-nav__link">
+    export_key_images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_key_images" class="md-nav__link">
+    import_key_images
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proofs-and-signatures" class="md-nav__link">
+    Proofs and Signatures
+  </a>
+  
+    <nav class="md-nav" aria-label="Proofs and Signatures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sign" class="md-nav__link">
+    sign
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify" class="md-nav__link">
+    verify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_tx_key" class="md-nav__link">
+    get_tx_key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_tx_key" class="md-nav__link">
+    check_tx_key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_tx_proof" class="md-nav__link">
+    get_tx_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_tx_proof" class="md-nav__link">
+    check_tx_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_spend_proof" class="md-nav__link">
+    get_spend_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_spend_proof" class="md-nav__link">
+    check_spend_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_reserve_proof" class="md-nav__link">
+    get_reserve_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_reserve_proof" class="md-nav__link">
+    check_reserve_proof
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multisig" class="md-nav__link">
+    Multisig
+  </a>
+  
+    <nav class="md-nav" aria-label="Multisig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is_multisig" class="md-nav__link">
+    is_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare_multisig" class="md-nav__link">
+    prepare_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make_multisig" class="md-nav__link">
+    make_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_multisig" class="md-nav__link">
+    export_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_multisig" class="md-nav__link">
+    import_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finalize_multisig" class="md-nav__link">
+    finalize_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exchange_multisig_keys" class="md-nav__link">
+    exchange_multisig_keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign_multisig" class="md-nav__link">
+    sign_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit_multisig" class="md-nav__link">
+    submit_multisig
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wallet-information" class="md-nav__link">
+    Wallet information
+  </a>
+  
+    <nav class="md-nav" aria-label="Wallet information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_balance" class="md-nav__link">
+    get_balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_height" class="md-nav__link">
+    get_height
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start_mining" class="md-nav__link">
+    start_mining
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop_mining" class="md-nav__link">
+    stop_mining
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_languages" class="md-nav__link">
+    get_languages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_wallet" class="md-nav__link">
+    create_wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open_wallet" class="md-nav__link">
+    open_wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#close_wallet" class="md-nav__link">
+    close_wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change_wallet_password" class="md-nav__link">
+    change_wallet_password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate_from_keys" class="md-nav__link">
+    generate_from_keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore_deterministic_wallet" class="md-nav__link">
+    restore_deterministic_wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop_wallet" class="md-nav__link">
+    stop_wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rescan_blockchain" class="md-nav__link">
+    rescan_blockchain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_attribute" class="md-nav__link">
+    set_attribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_attribute" class="md-nav__link">
+    get_attribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make_uri" class="md-nav__link">
+    make_uri
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse_uri" class="md-nav__link">
+    parse_uri
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_address_book_entry" class="md-nav__link">
+    add_address_book_entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_address_book_entry" class="md-nav__link">
+    get_address_book_entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_address_book_entry" class="md-nav__link">
+    delete_address_book_entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rescan_spent" class="md-nav__link">
+    rescan_spent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_version" class="md-nav__link">
+    get_version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#store" class="md-nav__link">
+    store
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh" class="md-nav__link">
+    refresh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_daemon" class="md-nav__link">
+    set_daemon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_log_level" class="md-nav__link">
+    set_log_level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_log_categories" class="md-nav__link">
+    set_log_categories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addresses-and-accounts" class="md-nav__link">
+    Addresses and Accounts
+  </a>
+  
+    <nav class="md-nav" aria-label="Addresses and Accounts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_address" class="md-nav__link">
+    get_address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_address_index" class="md-nav__link">
+    get_address_index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_account_tags" class="md-nav__link">
+    get_account_tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_accounts" class="md-nav__link">
+    get_accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_address" class="md-nav__link">
+    create_address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make_integrated_address" class="md-nav__link">
+    make_integrated_address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split_integrated_address" class="md-nav__link">
+    split_integrated_address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label_address" class="md-nav__link">
+    label_address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_account" class="md-nav__link">
+    create_account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label_account" class="md-nav__link">
+    label_account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tag_accounts" class="md-nav__link">
+    tag_accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#untag_accounts" class="md-nav__link">
+    untag_accounts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_account_tag_description" class="md-nav__link">
+    set_account_tag_description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate_address" class="md-nav__link">
+    validate_address
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfers" class="md-nav__link">
+    Transfers
+  </a>
+  
+    <nav class="md-nav" aria-label="Transfers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transfer" class="md-nav__link">
+    transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer_split" class="md-nav__link">
+    transfer_split
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign_transfer" class="md-nav__link">
+    sign_transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit_transfer" class="md-nav__link">
+    submit_transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep_dust" class="md-nav__link">
+    sweep_dust
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep_all" class="md-nav__link">
+    sweep_all
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep_single" class="md-nav__link">
+    sweep_single
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relay_tx" class="md-nav__link">
+    relay_tx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_payments" class="md-nav__link">
+    get_payments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_bulk_payments" class="md-nav__link">
+    get_bulk_payments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incoming_transfers" class="md-nav__link">
+    incoming_transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query_key" class="md-nav__link">
+    query_key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_tx_notes" class="md-nav__link">
+    set_tx_notes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_tx_notes" class="md-nav__link">
+    get_tx_notes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_transfers" class="md-nav__link">
+    get_transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_transfer_by_txid" class="md-nav__link">
+    get_transfer_by_txid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_outputs" class="md-nav__link">
+    export_outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_outputs" class="md-nav__link">
+    import_outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_key_images" class="md-nav__link">
+    export_key_images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_key_images" class="md-nav__link">
+    import_key_images
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proofs-and-signatures" class="md-nav__link">
+    Proofs and Signatures
+  </a>
+  
+    <nav class="md-nav" aria-label="Proofs and Signatures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sign" class="md-nav__link">
+    sign
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify" class="md-nav__link">
+    verify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_tx_key" class="md-nav__link">
+    get_tx_key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_tx_key" class="md-nav__link">
+    check_tx_key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_tx_proof" class="md-nav__link">
+    get_tx_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_tx_proof" class="md-nav__link">
+    check_tx_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_spend_proof" class="md-nav__link">
+    get_spend_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_spend_proof" class="md-nav__link">
+    check_spend_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_reserve_proof" class="md-nav__link">
+    get_reserve_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_reserve_proof" class="md-nav__link">
+    check_reserve_proof
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multisig" class="md-nav__link">
+    Multisig
+  </a>
+  
+    <nav class="md-nav" aria-label="Multisig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is_multisig" class="md-nav__link">
+    is_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare_multisig" class="md-nav__link">
+    prepare_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make_multisig" class="md-nav__link">
+    make_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_multisig" class="md-nav__link">
+    export_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_multisig" class="md-nav__link">
+    import_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finalize_multisig" class="md-nav__link">
+    finalize_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exchange_multisig_keys" class="md-nav__link">
+    exchange_multisig_keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign_multisig" class="md-nav__link">
+    sign_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit_multisig" class="md-nav__link">
+    submit_multisig
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <p><a class="md-button" href="#"><span class="label_source"></span></a></p>
+<h1 id="wallet-rpc">Wallet RPC</h1>
+<p>This page is still under construction. Follow the progress on <a href="https://github.com/ivoryguru/aeonwiki">github</a>.</p>
+<h2 id="usage">Usage</h2>
+<p><code>./aeon-wallet-rpc [options]</code></p>
+<h2 id="description">Description</h2>
+<p>This allows one to interact with a wallet through HTTP requests.
+Every request has the following options:</p>
+<pre><code>IP=127.0.0.1
+PORT=5000
+METHOD=&quot;get_balance&quot;
+PARAMS=&quot;{&quot;account_index&quot;:0,&quot;address_indices&quot;:[0,1]}&quot;
+</code></pre>
+<p>Then send the information as a request to the server in the following format:</p>
+<pre><code>curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;get_balance&quot;,&quot;params&quot;:{&quot;account_index&quot;:0,&quot;address_indices&quot;:[0,1]}}' -H 'Content-Type: application/json'
+</code></pre>
+<h2 id="authentication">Authentication</h2>
+<p>When a user login is required for the RPC, it follows the HTTP digest authentication scheme specified in <a href="https://tools.ietf.org/html/rfc2617#page-7">IETF RFC 2617</a>.
+If using <code>curl</code>, these parameters can be specified with the <code>-u</code> option as follows:</p>
+<pre><code>curl http://127.0.0.1:5000/json_rpc -u username:password --digest -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;get_balance&quot;,&quot;params&quot;:{&quot;account_index&quot;:0,&quot;address_indices&quot;:[0,1]}}' -H 'Content-Type: application/json'
+</code></pre>
+<p>To disable user authentication, use the option <code>disable-rpc-login</code> on launch.</p>
+<h2 id="commands">Commands</h2>
+<ul>
+<li>
+<p><a href="#wallet-information">Wallet information</a></p>
+</li>
+<li>
+<p><a href="#addresses-and-accounts">Addresses and Accounts</a></p>
+</li>
+<li>
+<p><a href="#transfers">Transfers</a></p>
+</li>
+<li>
+<p><a href="#proofs-and-signatures">Proofs and Signatures</a></p>
+</li>
+<li>
+<p><a href="#multisig">Multisig</a></p>
+</li>
+</ul>
+<h3 id="wallet-information">Wallet information</h3>
+<h4 id="get_balance"><code>get_balance</code></h4>
+<h5>Params</h5>
+<pre><code>int account_index
+int[] address_indices
+</code></pre>
+<h5>Response</h5>
+<pre><code>int balance
+int unlocked_balance
+bool multisig_import_needed
+Subaddress[] per_subaddress
+int blocks_to_unlock
+</code></pre>
+<p>where <code>Subaddress</code> has the following attributes:</p>
+<pre><code>Subaddress:
+  int address_index
+  string address
+  int balance
+  int unlocked_balance
+  string label
+  int num_unspent_outputs
+  int blocks_to_unlock
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;get_balance&quot;,&quot;params&quot;:{&quot;account_index&quot;:0,&quot;address_indices&quot;:[0,1]}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;balance&quot;: 1000,
+    &quot;blocks_to_unlock&quot;: 0,
+    &quot;multisig_import_needed&quot;: false,
+    &quot;per_subaddress&quot;: [{
+      &quot;address&quot;: &quot;W..........&quot;,
+      &quot;address_index&quot;: 0,
+      &quot;balance&quot;: 500,
+      &quot;blocks_to_unlock&quot;: 0,
+      &quot;label&quot;: &quot;Primary account&quot;,
+      &quot;num_unspent_outputs&quot;: 1,
+      &quot;unlocked_balance&quot;: 500
+    },{
+      &quot;address&quot;: &quot;X...............&quot;,
+      &quot;address_index&quot;: 1,
+      &quot;balance&quot;: 500,
+      &quot;blocks_to_unlock&quot;: 0,
+      &quot;label&quot;: &quot;new-sub&quot;,
+      &quot;num_unspent_outputs&quot;: 1,
+      &quot;unlocked_balance&quot;: 500
+    }],
+    &quot;unlocked_balance&quot;: 1000
+  }
+}
+</code></pre>
+<h4 id="get_height"><code>get_height</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<h5>Response</h5>
+<pre><code>int  height
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;get_height&quot;}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;height&quot;: 1294237
+  }
+}
+</code></pre>
+<h4 id="start_mining"><code>start_mining</code></h4>
+<h5>Params</h5>
+<pre><code>int    threads_count
+bool        do_background_mining
+bool        ignore_battery
+</code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="stop_mining"><code>stop_mining</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="get_languages"><code>get_languages</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<h5>Response</h5>
+<pre><code>string[] languages
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="create_wallet"><code>create_wallet</code></h4>
+<h5>Params</h5>
+<pre><code>string filename
+string password
+string language
+
+</code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="open_wallet"><code>open_wallet</code></h4>
+<h5>Params</h5>
+<pre><code>string filename
+string password
+</code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="close_wallet"><code>close_wallet</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="change_wallet_password"><code>change_wallet_password</code></h4>
+<h5>Params</h5>
+<pre><code>string old_password
+string new_password
+</code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="generate_from_keys"><code>generate_from_keys</code></h4>
+<h5>Params</h5>
+<pre><code>int restore_height
+string filename
+string address
+string spendkey
+string viewkey
+string password
+</code></pre>
+<h5>Response</h5>
+<pre><code>string address
+string info
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="restore_deterministic_wallet"><code>restore_deterministic_wallet</code></h4>
+<h5>Params</h5>
+<pre><code>int restore_height
+string filename
+string seed
+string seed_offset
+string password
+string language
+</code></pre>
+<h5>Response</h5>
+<pre><code>string address
+string seed
+string info
+bool was_deprecated
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="stop_wallet"><code>stop_wallet</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="rescan_blockchain"><code>rescan_blockchain</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="set_attribute"><code>set_attribute</code></h4>
+<h5>Params</h5>
+<pre><code>string key
+string value
+</code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="get_attribute"><code>get_attribute</code></h4>
+<h5>Params</h5>
+<pre><code>string key
+</code></pre>
+<h5>Response</h5>
+<pre><code>string value
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="make_uri"><code>make_uri</code></h4>
+<ul>
+<li>uri_spec</li>
+</ul>
+<pre><code>string address
+string payment_id
+int amount
+string tx_description
+string recipient_name
+</code></pre>
+<h5>Params</h5>
+<pre><code>public uri_spec
+</code></pre>
+<h5>Response</h5>
+<pre><code>string uri
+
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="parse_uri"><code>parse_uri</code></h4>
+<h5>Params</h5>
+<pre><code>string uri
+</code></pre>
+<h5>Response</h5>
+<pre><code>uri_spec uri
+string[] unknown_parameters
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="add_address_book_entry"><code>add_address_book_entry</code></h4>
+<h5>Params</h5>
+<pre><code>string address
+string payment_id
+string description
+</code></pre>
+<h5>Response</h5>
+<pre><code>int index
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="get_address_book_entry"><code>get_address_book_entry</code></h4>
+<h5>Params</h5>
+<pre><code>int[] entries
+</code></pre>
+<ul>
+<li>entry </li>
+</ul>
+<pre><code>int index
+string address
+string payment_id
+string description
+</code></pre>
+<h5>Response</h5>
+<pre><code>entry[] entries
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="delete_address_book_entry"><code>delete_address_book_entry</code></h4>
+<h5>Params</h5>
+<pre><code>int index
+</code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="rescan_spent"><code>rescan_spent</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="get_version"><code>get_version</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<h5>Response</h5>
+<pre><code>int version
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="store"><code>store</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;store&quot;}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="refresh"><code>refresh</code></h4>
+<h5>Params</h5>
+<pre><code>int start_height
+</code></pre>
+<h5>Response</h5>
+<pre><code>int blocks_fetched
+bool received_money
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="set_daemon"><code>set_daemon</code></h4>
+<h5>Params</h5>
+<pre><code>string address
+bool trusted
+bool ssl
+#if 0 // to be enabled when ssl support is added
+string ssl_support // disabled, enabled, autodetect
+string ssl_private_key_path
+string ssl_certificate_path
+string[] ssl_allowed_certificates
+string[] ssl_allowed_fingerprints
+bool ssl_allow_any_cert
+#endif
+#if 0 // to be enabled when ssl support is added
+#endif
+</code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="set_log_level"><code>set_log_level</code></h4>
+<h5>Params</h5>
+<pre><code>int8_t level
+</code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="set_log_categories"><code>set_log_categories</code></h4>
+<h5>Params</h5>
+<pre><code>string categories
+</code></pre>
+<h5>Response</h5>
+<pre><code>string categories
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h3 id="addresses-and-accounts">Addresses and Accounts</h3>
+<h4 id="get_address"><code>get_address</code></h4>
+<h5>Params</h5>
+<pre><code>int account_index
+int[] address_index
+</code></pre>
+<h5>Response</h5>
+<pre><code>string address
+Address[] addresses
+</code></pre>
+<p>where <code>Address</code> has the following attributes:</p>
+<pre><code>Address:
+  string address
+  string label
+  int address_index
+  bool used
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;get_address&quot;,&quot;params&quot;:{&quot;account_index&quot;:0,&quot;address_index&quot;:[0,1]}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;address&quot;: &quot;W.........&quot;,
+    &quot;addresses&quot;: [{
+      &quot;address&quot;: &quot;W.........&quot;,
+      &quot;address_index&quot;: 0,
+      &quot;label&quot;: &quot;Primary account&quot;,
+      &quot;used&quot;: true
+    },{
+      &quot;address&quot;: &quot;X.........&quot;,
+      &quot;address_index&quot;: 1,
+      &quot;label&quot;: &quot;new-sub&quot;,
+      &quot;used&quot;: true
+    }]
+  }
+}
+</code></pre>
+<h4 id="get_address_index"><code>get_address_index</code></h4>
+<h5>Params</h5>
+<pre><code>string address
+</code></pre>
+<h5>Response</h5>
+<pre><code>SubaddressIndex index
+</code></pre>
+<p>where <code>SubaddressIndex</code> has the following attributes:</p>
+<pre><code>SubaddressIndex:
+  int major
+  int minor
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;get_address_index&quot;,&quot;params&quot;:{&quot;address&quot;:&quot;X..................&quot;}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;index&quot;: {
+      &quot;major&quot;: 0,
+      &quot;minor&quot;: 1
+    }
+  }
+}
+</code></pre>
+<h4 id="get_account_tags"><code>get_account_tags</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<h5>Response</h5>
+<pre><code>AccountTagInfo[] account_tags
+</code></pre>
+<p>where <code>AccountTagInfo</code> has the following attributes:</p>
+<pre><code>string tag
+string label
+int[] accounts
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;get_account_tags&quot;}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="get_accounts"><code>get_accounts</code></h4>
+<h5>Params</h5>
+<pre><code>string tag      // all accounts if empty, otherwise those accounts with this tag
+</code></pre>
+<h5>Response</h5>
+<pre><code>int total_balance
+int total_unlocked_balance
+SubaddressAccount[] subaddress_accounts
+</code></pre>
+<p>where <code>SubaddressAccount</code> has the following attributes:</p>
+<pre><code>SubaddressAccounts:
+  int account_index
+  int balance
+  string base_address
+  string label
+  string tag
+  int unlocked_balance
+</code></pre>
+<h5>Example</h5>
+<pre><code>curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;get_accounts&quot;}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;subaddress_accounts&quot;: [{
+      &quot;account_index&quot;: 0,
+      &quot;balance&quot;: 0,
+      &quot;base_address&quot;: &quot;W...................................&quot;,
+      &quot;label&quot;: &quot;Primary account&quot;,
+      &quot;tag&quot;: &quot;&quot;,
+      &quot;unlocked_balance&quot;: 0
+    },{
+      &quot;account_index&quot;: 1,
+      &quot;balance&quot;: 0,
+      &quot;base_address&quot;: &quot;X.......................................&quot;,
+      &quot;label&quot;: &quot;&quot;,
+      &quot;tag&quot;: &quot;&quot;,
+      &quot;unlocked_balance&quot;: 0
+    }],
+    &quot;total_balance&quot;: 0,
+    &quot;total_unlocked_balance&quot;: 0
+  }
+}
+</code></pre>
+<h4 id="create_address"><code>create_address</code></h4>
+<h5>Params</h5>
+<pre><code>int account_index
+string label
+</code></pre>
+<h5>Response</h5>
+<pre><code>string   address
+int      address_index
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;create_address&quot;,&quot;params&quot;:{&quot;account_index&quot;:0,&quot;label&quot;:&quot;test&quot;}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;address&quot;: &quot;X.......................&quot;,
+    &quot;address_index&quot;: 2
+  }
+}
+</code></pre>
+<h4 id="make_integrated_address"><code>make_integrated_address</code></h4>
+<h5>Params</h5>
+<pre><code>string standard_address
+string payment_id
+</code></pre>
+<h5>Response</h5>
+<pre><code>string integrated_address
+string payment_id
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;make_integrated_address&quot;,&quot;params&quot;:{&quot;standard_address&quot;:&quot;...&quot;,&quot;payment_id&quot;:&quot;...&quot;}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;integrated_address&quot;:&quot;...&quot;,
+    &quot;payment_id&quot;:&quot;...&quot;
+  }
+}
+</code></pre>
+<h4 id="split_integrated_address"><code>split_integrated_address</code></h4>
+<h5>Params</h5>
+<pre><code>string integrated_address
+</code></pre>
+<h5>Response</h5>
+<pre><code>string standard_address
+string payment_id
+bool is_subaddress
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="label_address"><code>label_address</code></h4>
+<h5>Params</h5>
+<pre><code>SubaddressIndex index
+string label
+</code></pre>
+<p>where <code>SubaddressIndex</code> has the following attributes:</p>
+<pre><code>SubaddressIndex:
+  int major
+  int minor
+</code></pre>
+<h5>Response</h5>
+<pre><code>
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;label_address&quot;,&quot;params&quot;:{&quot;index&quot;:{&quot;major&quot;:0,&quot;minor&quot;:2},&quot;label&quot;:&quot;test14314312&quot;}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;get_address&quot;,&quot;params&quot;:{&quot;account_index&quot;:0,&quot;address_index&quot;:[2]}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;address&quot;: &quot;W.............................&quot;,
+    &quot;addresses&quot;: [{
+      &quot;address&quot;: &quot;X.................................&quot;,
+      &quot;address_index&quot;: 2,
+      &quot;label&quot;: &quot;test14314312&quot;,
+      &quot;used&quot;: false
+    }]
+  }
+}
+</code></pre>
+<h4 id="create_account"><code>create_account</code></h4>
+<h5>Params</h5>
+<pre><code>string label
+</code></pre>
+<h5>Response</h5>
+<pre><code>int account_index
+string address      // the 0-th address for convenience
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;create_account&quot;}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;account_index&quot;: 1,
+    &quot;address&quot;: &quot;X.....................&quot;
+  }
+}
+</code></pre>
+<h4 id="label_account"><code>label_account</code></h4>
+<h5>Params</h5>
+<pre><code>int account_index
+string label
+</code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;label_account&quot;,&quot;params&quot;:{&quot;account_index&quot;:0,&quot;label&quot;:&quot;mywallet&quot;}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="tag_accounts"><code>tag_accounts</code></h4>
+<h5>Params</h5>
+<pre><code>string tag
+int[] accounts
+</code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;tag_accounts&quot;,&quot;params&quot;:{&quot;tag&quot;:&quot;mywallet&quot;,&quot;accounts&quot;:[0]}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="untag_accounts"><code>untag_accounts</code></h4>
+<h5>Params</h5>
+<pre><code>int[] accounts
+</code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;untag_accounts&quot;,&quot;params&quot;:{&quot;accounts&quot;:[0]}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="set_account_tag_description"><code>set_account_tag_description</code></h4>
+<h5>Params</h5>
+<pre><code>string tag
+string description
+</code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;set_account_tag_description&quot;,&quot;params&quot;:{&quot;tag&quot;:&quot;mywallet&quot;,&quot;description&quot;:&quot;mydescription&quot;}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="validate_address"><code>validate_address</code></h4>
+<h5>Params</h5>
+<pre><code>string address
+bool any_net_type
+bool allow_openalias
+
+</code></pre>
+<h5>Response</h5>
+<pre><code>bool valid
+bool integrated
+bool subaddress
+string nettype
+string openalias_address
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h3 id="transfers">Transfers</h3>
+<h4 id="transfer"><code>transfer</code></h4>
+<h5>Params</h5>
+<pre><code>TransferDestination[] destinations
+int account_index
+int[] subaddr_indices
+int priority
+int mixin
+int ring_size
+int unlock_time
+string payment_id
+bool get_tx_key
+bool do_not_relay
+bool get_tx_hex
+bool get_tx_metadata
+</code></pre>
+<p>where <code>TransferDestination</code> has the following attributes:</p>
+<pre><code>int amount
+string address
+</code></pre>
+<p><code>amount</code> is in atomic units. </p>
+<h5>Response</h5>
+<pre><code>string tx_hash
+string tx_key
+int amount
+int fee
+string tx_blob
+string tx_metadata
+string multisig_txset
+string unsigned_txset
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;transfer&quot;,&quot;params&quot;:{&quot;destinations&quot;:[{&quot;amount&quot;:10000,&quot;address&quot;:&quot;W...&quot;}], &quot;account_index&quot;:0, &quot;subaddress_indices&quot;: [0], &quot;priority&quot;:0, &quot;mixin&quot;:0, &quot;ring_size&quot;:0, &quot;unlock_time&quot;:0, &quot;payment_id&quot;:&quot;&quot;, &quot;get_tx_key&quot;:true, &quot;do_not_relay&quot;:false,&quot;get_tx_hex&quot;:true,&quot;get_tx_metadata&quot;:true}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;amount&quot;: 10000,
+    &quot;fee&quot;: 1199990000,
+    &quot;multisig_txset&quot;: &quot;&quot;,
+    &quot;tx_blob&quot;: &quot;...&quot;,
+    &quot;tx_hash&quot;: &quot;...&quot;,
+    &quot;tx_key&quot;: &quot;...&quot;,
+    &quot;tx_metadata&quot;: &quot;...&quot;,
+    &quot;unsigned_txset&quot;: &quot;&quot;
+  }
+}
+</code></pre>
+<h4 id="transfer_split"><code>transfer_split</code></h4>
+<h5>Params</h5>
+<pre><code>transfer_destination[] destinations
+int account_index
+int[] subaddr_indices
+int priority
+int mixin
+int ring_size
+int unlock_time
+string payment_id
+bool get_tx_keys
+bool do_not_relay
+bool get_tx_hex
+bool get_tx_metadata
+</code></pre>
+<p><code>amount</code> is in atomic units. </p>
+<h5>Response</h5>
+<pre><code>string[] tx_hash_list
+string[] tx_key_list
+int[] amount_list
+int[] fee_list
+string[] tx_blob_list
+string[] tx_metadata_list
+string multisig_txset
+string unsigned_txset
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;transfer_split&quot;,&quot;params&quot;:{&quot;destinations&quot;:[{&quot;amount&quot;:10,&quot;address&quot;:&quot;W...&quot;}], &quot;account_index&quot;:0, &quot;subaddress_indices&quot;: [0], &quot;priority&quot;:0, &quot;mixin&quot;:0, &quot;ring_size&quot;:0, &quot;unlock_time&quot;:0, &quot;payment_id&quot;:&quot;&quot;, &quot;get_tx_key&quot;:true, &quot;do_not_relay&quot;:false,&quot;get_tx_hex&quot;:true,&quot;get_tx_metadata&quot;:true}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;amount_list&quot;: [1,2,3,4]
+    &quot;fee_list&quot;: [1,1,1,1],
+    &quot;multisig_txset&quot;: &quot;&quot;,
+    &quot;tx_blob_list&quot;: [&quot;...&quot;,&quot;...&quot;,&quot;...&quot;,&quot;...&quot;],
+    &quot;tx_hash_list&quot;: [&quot;...&quot;,&quot;...&quot;,&quot;...&quot;,&quot;...&quot;],
+    &quot;tx_key_list&quot;: [&quot;...&quot;,&quot;...&quot;,&quot;...&quot;,&quot;...&quot;],
+    &quot;tx_metadata_list&quot;: [&quot;...&quot;,&quot;...&quot;,&quot;...&quot;,&quot;...&quot;],
+    &quot;unsigned_txset&quot;: &quot;&quot;
+  }
+}
+</code></pre>
+<h4 id="sign_transfer"><code>sign_transfer</code></h4>
+<h5>Params</h5>
+<pre><code>string unsigned_txset
+bool export_raw
+</code></pre>
+<h5>Response</h5>
+<pre><code>string signed_txset
+string[] tx_hash_list
+string[] tx_raw_list
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;sign_transfer&quot;,&quot;params&quot;:{&quot;unsigned_txset&quot;:&quot;....&quot;,&quot;export_raw&quot;:true}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;signed_txset&quot;:&quot;...&quot;,
+    &quot;tx_hash_list&quot;:[&quot;...&quot;,&quot;...&quot;],
+    &quot;tx_raw_list&quot;:[&quot;...&quot;,&quot;...&quot;]
+  }
+}
+</code></pre>
+<h4 id="submit_transfer"><code>submit_transfer</code></h4>
+<h5>Params</h5>
+<pre><code>string tx_data_hex
+</code></pre>
+<h5>Response</h5>
+<pre><code>string[] tx_hash_list
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;submit_transfer&quot;,&quot;params&quot;:{&quot;tx_data_hex&quot;:&quot;....&quot;}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;tx_hash_list&quot;:[&quot;...&quot;,&quot;...&quot;]
+  }
+}
+</code></pre>
+<h4 id="sweep_dust"><code>sweep_dust</code></h4>
+<h5>Params</h5>
+<pre><code>bool get_tx_keys
+bool do_not_relay
+bool get_tx_hex
+bool get_tx_metadata
+</code></pre>
+<h5>Response</h5>
+<pre><code>string[] tx_hash_list
+string[] tx_key_list
+int[] amount_list
+int[] fee_list
+string[] tx_blob_list
+string[] tx_metadata_list
+string multisig_txset
+string unsigned_txset
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;sweep_dust&quot;,&quot;params&quot;:{&quot;get_tx_key&quot;:true, &quot;do_not_relay&quot;:false,&quot;get_tx_hex&quot;:true,&quot;get_tx_metadata&quot;:true}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;amount_list&quot;: [1,2,3,4]
+    &quot;fee_list&quot;: [1,1,1,1],
+    &quot;multisig_txset&quot;: &quot;...&quot;,
+    &quot;tx_blob_list&quot;: [&quot;...&quot;,&quot;...&quot;,&quot;...&quot;,&quot;...&quot;],
+    &quot;tx_hash_list&quot;: [&quot;...&quot;,&quot;...&quot;,&quot;...&quot;,&quot;...&quot;],
+    &quot;tx_key_list&quot;: [&quot;...&quot;,&quot;...&quot;,&quot;...&quot;,&quot;...&quot;],
+    &quot;tx_metadata_list&quot;: [&quot;...&quot;,&quot;...&quot;,&quot;...&quot;,&quot;...&quot;],
+    &quot;unsigned_txset&quot;: &quot;...&quot;
+  }
+}
+</code></pre>
+<h4 id="sweep_all"><code>sweep_all</code></h4>
+<h5>Params</h5>
+<pre><code>string address
+int account_index
+int[] subaddr_indices
+int priority
+int mixin
+int ring_size
+int unlock_time
+string payment_id
+bool get_tx_keys
+int below_amount
+bool do_not_relay
+bool get_tx_hex
+bool get_tx_metadata
+</code></pre>
+<h5>Response</h5>
+<pre><code>string[] tx_hash_list
+string[] tx_key_list
+int[] amount_list
+int[] fee_list
+string[] tx_blob_list
+string[] tx_metadata_list
+string multisig_txset
+string unsigned_txset
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;sweep_all&quot;,&quot;params&quot;:{&quot;address&quot;:&quot;W...&quot;, &quot;account_index&quot;:0, &quot;subaddress_indices&quot;: [0], &quot;priority&quot;:0, &quot;mixin&quot;:0, &quot;ring_size&quot;:0, &quot;unlock_time&quot;:0, &quot;payment_id&quot;:&quot;&quot;, &quot;get_tx_key&quot;:true, &quot;do_not_relay&quot;:false,&quot;get_tx_hex&quot;:true,&quot;get_tx_metadata&quot;:true}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;amount_list&quot;: [1,2,3,4]
+    &quot;fee_list&quot;: [1,1,1,1],
+    &quot;multisig_txset&quot;: &quot;...&quot;,
+    &quot;tx_blob_list&quot;: [&quot;...&quot;,&quot;...&quot;,&quot;...&quot;,&quot;...&quot;],
+    &quot;tx_hash_list&quot;: [&quot;...&quot;,&quot;...&quot;,&quot;...&quot;,&quot;...&quot;],
+    &quot;tx_key_list&quot;: [&quot;...&quot;,&quot;...&quot;,&quot;...&quot;,&quot;...&quot;],
+    &quot;tx_metadata_list&quot;: [&quot;...&quot;,&quot;...&quot;,&quot;...&quot;,&quot;...&quot;],
+    &quot;unsigned_txset&quot;: &quot;...&quot;
+  }
+}
+</code></pre>
+<h4 id="sweep_single"><code>sweep_single</code></h4>
+<h5>Params</h5>
+<pre><code>string address
+int priority
+int mixin
+int ring_size
+int unlock_time
+string payment_id
+bool get_tx_key
+string key_image
+bool do_not_relay
+bool get_tx_hex
+bool get_tx_metadata
+</code></pre>
+<h5>Response</h5>
+<pre><code>string tx_hash
+string tx_key
+int amount
+int fee
+string tx_blob
+string tx_metadata
+string multisig_txset
+string unsigned_txset
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;sweep_all&quot;,&quot;params&quot;:{&quot;address&quot;:&quot;W...&quot;, &quot;account_index&quot;:0, &quot;subaddress_indices&quot;: [0], &quot;priority&quot;:0, &quot;mixin&quot;:0, &quot;ring_size&quot;:0, &quot;unlock_time&quot;:0, &quot;payment_id&quot;:&quot;&quot;, &quot;get_tx_key&quot;:true, &quot;key_image&quot;:&quot;...&quot;,&quot;do_not_relay&quot;:false,&quot;get_tx_hex&quot;:true,&quot;get_tx_metadata&quot;:true}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;amount&quot;: 10000,
+    &quot;fee&quot;: 1199990000,
+    &quot;multisig_txset&quot;: &quot;&quot;,
+    &quot;tx_blob&quot;: &quot;...&quot;,
+    &quot;tx_hash&quot;: &quot;...&quot;,
+    &quot;tx_key&quot;: &quot;...&quot;,
+    &quot;tx_metadata&quot;: &quot;...&quot;,
+    &quot;unsigned_txset&quot;: &quot;&quot;
+  }
+}
+</code></pre>
+<h4 id="relay_tx"><code>relay_tx</code></h4>
+<h5>Params</h5>
+<pre><code>string hex
+</code></pre>
+<h5>Response</h5>
+<pre><code>string tx_hash
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;relay_tx&quot;,&quot;params&quot;:{&quot;hex&quot;:&quot;...&quot;}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;tx_hash&quot;: &quot;...&quot;
+  }
+}
+</code></pre>
+<h4 id="get_payments"><code>get_payments</code></h4>
+<h5>Params</h5>
+<pre><code>string payment_id
+</code></pre>
+<h5>Response</h5>
+<pre><code>PaymentDetails[] payments
+</code></pre>
+<p>where <code>PaymentDetails</code> has the following attributes:</p>
+<pre><code>string payment_id
+string tx_hash
+int amount
+int block_height
+int unlock_time
+SubaddressIndex subaddr_index
+string address
+</code></pre>
+<p>where <code>SubaddressIndex</code> has the following attributes:</p>
+<pre><code>SubaddressIndex:
+  int major
+  int minor
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;get_payments&quot;,&quot;params&quot;:{&quot;payment_id&quot;:&quot;...&quot;}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    [
+      &quot;payment_id&quot;: &quot;...&quot;,
+      &quot;tx_hash&quot;: &quot;...&quot;,
+      &quot;amount&quot;: 10000,
+      &quot;block_height&quot;: 10000,
+      &quot;unlock_time&quot;: 10000,
+      &quot;subaddr_index&quot;: {&quot;major&quot;:0,&quot;minor&quot;:0},
+      &quot;address&quot;: &quot;...&quot;
+    ] ,
+    [
+      &quot;payment_id&quot;: &quot;...&quot;,
+      &quot;tx_hash&quot;: &quot;...&quot;,
+      &quot;amount&quot;: 10000,
+      &quot;block_height&quot;: 10000,
+      &quot;unlock_time&quot;: 10000,
+      &quot;subaddr_index&quot;: {&quot;major&quot;:0,&quot;minor&quot;:0},
+      &quot;address&quot;: &quot;...&quot;
+    ]
+    }
+}
+</code></pre>
+<h4 id="get_bulk_payments"><code>get_bulk_payments</code></h4>
+<h5>Params</h5>
+<pre><code>string[] payment_ids
+int min_block_height
+</code></pre>
+<h5>Response</h5>
+<pre><code>PaymentDetails[] payments
+</code></pre>
+<p>where <code>PaymentDetails</code> has the following attributes:</p>
+<pre><code>string payment_id
+string tx_hash
+int amount
+int block_height
+int unlock_time
+SubaddressIndex subaddr_index
+string address
+</code></pre>
+<p>where <code>SubaddressIndex</code> has the following attributes:</p>
+<pre><code>SubaddressIndex:
+  int major
+  int minor
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;get_bulk_payments&quot;,&quot;params&quot;:{&quot;payment_id&quot;:[&quot;...&quot;,&quot;...&quot;,&quot;...&quot;],&quot;min_block_height&quot;:1500000}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    [
+      &quot;payment_id&quot;: &quot;...&quot;,
+      &quot;tx_hash&quot;: &quot;...&quot;,
+      &quot;amount&quot;: 10000,
+      &quot;block_height&quot;: 10000,
+      &quot;unlock_time&quot;: 10000,
+      &quot;subaddr_index&quot;: {&quot;major&quot;:0,&quot;minor&quot;:0},
+      &quot;address&quot;: &quot;...&quot;
+    ] ,
+    [
+      &quot;payment_id&quot;: &quot;...&quot;,
+      &quot;tx_hash&quot;: &quot;...&quot;,
+      &quot;amount&quot;: 10000,
+      &quot;block_height&quot;: 10000,
+      &quot;unlock_time&quot;: 10000,
+      &quot;subaddr_index&quot;: {&quot;major&quot;:0,&quot;minor&quot;:0},
+      &quot;address&quot;: &quot;...&quot;
+    ]
+    }
+}
+</code></pre>
+<h4 id="incoming_transfers"><code>incoming_transfers</code></h4>
+<h5>Params</h5>
+<pre><code>string transfer_type
+int account_index
+int[] subaddr_indices
+
+</code></pre>
+<h5>Response</h5>
+<pre><code>TransferDetails[] transfers
+</code></pre>
+<p>where <code>TransferDetails</code> has the following attributes:</p>
+<pre><code>int amount
+bool spent
+int global_index
+string tx_hash
+SubaddressIndex subaddr_index
+string key_image
+</code></pre>
+<p>where <code>SubaddressIndex</code> has the following attributes:</p>
+<pre><code>SubaddressIndex:
+  int major
+  int minor
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;incoming_transfers&quot;,&quot;params&quot;:{&quot;transfer_type&quot;:&quot;...&quot;,&quot;account_index&quot;:0,&quot;subaddr_indices:[0]}}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;transfers&quot;: [
+      &quot;amount&quot;: 100,
+      &quot;spent&quot;: false,
+      &quot;global_index&quot;: 1,
+      &quot;tx_hash&quot;: &quot;...&quot;,
+      &quot;subaddr_index&quot;: {&quot;major&quot;: 1, &quot;minor&quot;:0},
+      &quot;key_image&quot;: &quot;...&quot;,
+    ] , 
+    [
+      &quot;amount&quot;: 100,
+      &quot;spent&quot;: false,
+      &quot;global_index&quot;: 1,
+      &quot;tx_hash&quot;: &quot;...&quot;,
+      &quot;subaddr_index&quot;: {&quot;major&quot;: 1, &quot;minor&quot;:0},
+      &quot;key_image&quot;: &quot;...&quot;,
+    ]
+  }
+}
+</code></pre>
+<h4 id="query_key"><code>query_key</code></h4>
+<h5>Params</h5>
+<pre><code>string key_type
+</code></pre>
+<h5>Response</h5>
+<pre><code>string key
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;query_key&quot;,&quot;params&quot;:{&quot;key_type&quot;:&quot;...&quot;}]}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;key&quot;:&quot;...&quot;
+  }
+}
+</code></pre>
+<h4 id="set_tx_notes"><code>set_tx_notes</code></h4>
+<h5>Params</h5>
+<pre><code>string[] txids
+string[] notes
+
+</code></pre>
+<h5>Response</h5>
+<pre><code></code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="get_tx_notes"><code>get_tx_notes</code></h4>
+<h5>Params</h5>
+<pre><code>string[] txids
+</code></pre>
+<h5>Response</h5>
+<pre><code>string[] notes
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="get_transfers"><code>get_transfers</code></h4>
+<h5>Params</h5>
+<pre><code>bool in
+bool out
+bool pending
+bool failed
+bool pool
+
+bool filter_by_height
+int min_height
+int max_height
+int account_index
+int[] subaddr_indices
+</code></pre>
+<ul>
+<li>transfer_entry</li>
+</ul>
+<pre><code>string txid
+string payment_id
+int height
+int timestamp
+int amount
+int fee
+string note
+transfer_destination[] destinations
+string type
+int unlock_time
+cryptonote::subaddress_index subaddr_index
+cryptonote::subaddress_index[] subaddr_indices
+string address
+bool double_spend_seen
+int confirmations
+int suggested_confirmations_threshold
+</code></pre>
+<h5>Response</h5>
+<pre><code>transfer_entry[] in
+transfer_entry[] out
+transfer_entry[] pending
+transfer_entry[] failed
+transfer_entry[] pool
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="get_transfer_by_txid"><code>get_transfer_by_txid</code></h4>
+<h5>Params</h5>
+<pre><code>string txid
+int account_index
+</code></pre>
+<h5>Response</h5>
+<pre><code>transfer_entry transfer
+transfer_entry[] transfers
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="export_outputs"><code>export_outputs</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<h5>Response</h5>
+<pre><code>string outputs_data_hex
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="import_outputs"><code>import_outputs</code></h4>
+<h5>Params</h5>
+<pre><code>string outputs_data_hex
+</code></pre>
+<h5>Response</h5>
+<pre><code>int num_imported
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="export_key_images"><code>export_key_images</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<ul>
+<li>signed_key_image </li>
+</ul>
+<pre><code>string key_image
+string signature
+</code></pre>
+<h5>Response</h5>
+<pre><code>signed_key_image[] signed_key_images
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="import_key_images"><code>import_key_images</code></h4>
+<ul>
+<li>signed_key_image </li>
+</ul>
+<pre><code>string key_image
+string signature
+</code></pre>
+<h5>Params</h5>
+<pre><code>signed_key_image[] signed_key_images
+</code></pre>
+<h5>Response</h5>
+<pre><code>int height
+int spent
+int unspent
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h3 id="proofs-and-signatures">Proofs and Signatures</h3>
+<h4 id="sign"><code>sign</code></h4>
+<h5>Params</h5>
+<pre><code>string data
+</code></pre>
+<h5>Response</h5>
+<pre><code>string signature
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="verify"><code>verify</code></h4>
+<h5>Params</h5>
+<pre><code>string data
+string address
+string signature
+</code></pre>
+<h5>Response</h5>
+<pre><code>bool good
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="get_tx_key"><code>get_tx_key</code></h4>
+<h5>Params</h5>
+<pre><code>string txid
+</code></pre>
+<h5>Response</h5>
+<pre><code>string tx_key
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="check_tx_key"><code>check_tx_key</code></h4>
+<h5>Params</h5>
+<pre><code>string txid
+string tx_key
+string address
+</code></pre>
+<h5>Response</h5>
+<pre><code>int received
+bool in_pool
+int confirmations
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="get_tx_proof"><code>get_tx_proof</code></h4>
+<h5>Params</h5>
+<pre><code>string txid
+string address
+string message
+</code></pre>
+<h5>Response</h5>
+<pre><code>string signature
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="check_tx_proof"><code>check_tx_proof</code></h4>
+<h5>Params</h5>
+<pre><code>string txid
+string address
+string message
+string signature
+</code></pre>
+<h5>Response</h5>
+<pre><code>bool good
+int received
+bool in_pool
+int confirmations
+
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="get_spend_proof"><code>get_spend_proof</code></h4>
+<h5>Params</h5>
+<pre><code>string txid
+string message
+</code></pre>
+<h5>Response</h5>
+<pre><code>string signature
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="check_spend_proof"><code>check_spend_proof</code></h4>
+<h5>Params</h5>
+<pre><code>string txid
+string message
+string signature
+</code></pre>
+<h5>Response</h5>
+<pre><code>bool good
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="get_reserve_proof"><code>get_reserve_proof</code></h4>
+<h5>Params</h5>
+<pre><code>bool all
+int account_index     // ignored when `all` is true
+int amount            // ignored when `all` is true
+string message
+</code></pre>
+<h5>Response</h5>
+<pre><code>string signature
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="check_reserve_proof"><code>check_reserve_proof</code></h4>
+<h5>Params</h5>
+<pre><code>string address
+string message
+string signature
+</code></pre>
+<h5>Response</h5>
+<pre><code>bool good
+int total
+int spent
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h3 id="multisig">Multisig</h3>
+<h4 id="is_multisig"><code>is_multisig</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<h5>Response</h5>
+<pre><code>bool multisig
+bool ready
+int threshold
+int total
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="prepare_multisig"><code>prepare_multisig</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<h5>Response</h5>
+<pre><code>string multisig_info
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="make_multisig"><code>make_multisig</code></h4>
+<h5>Params</h5>
+<pre><code>string[] multisig_info
+int threshold
+string password
+</code></pre>
+<h5>Response</h5>
+<pre><code>string address
+string multisig_info
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="export_multisig"><code>export_multisig</code></h4>
+<h5>Params</h5>
+<pre><code></code></pre>
+<h5>Response</h5>
+<pre><code>string info
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="import_multisig"><code>import_multisig</code></h4>
+<h5>Params</h5>
+<pre><code>string[] info
+</code></pre>
+<h5>Response</h5>
+<pre><code>int n_outputs
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="finalize_multisig"><code>finalize_multisig</code></h4>
+<h5>Params</h5>
+<pre><code>string password
+string[] multisig_info
+</code></pre>
+<h5>Response</h5>
+<pre><code>string address
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="exchange_multisig_keys"><code>exchange_multisig_keys</code></h4>
+<h5>Params</h5>
+<pre><code>string password
+string[] multisig_info
+</code></pre>
+<h5>Response</h5>
+<pre><code>string address
+string multisig_info
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="sign_multisig"><code>sign_multisig</code></h4>
+<h5>Params</h5>
+<pre><code>string tx_data_hex
+</code></pre>
+<h5>Response</h5>
+<pre><code>string tx_data_hex
+string[] tx_hash_list
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+<h4 id="submit_multisig"><code>submit_multisig</code></h4>
+<h5>Params</h5>
+<pre><code>string tx_data_hex
+</code></pre>
+<h5>Response</h5>
+<pre><code>string[] tx_hash_list
+</code></pre>
+<h5>Example</h5>
+<pre><code>&gt;&gt;&gt; curl http://127.0.0.1:5000/json_rpc -d '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;&quot;,&quot;params&quot;:}' -H 'Content-Type: application/json'
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+  }
+}
+</code></pre>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../options/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Options
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright 2020 aeon.wiki. <br> Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. <br>You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">apache.org</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://twitter.com/AeonCommunity" target="_blank" rel="noopener" title="\@AeonCommunity" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://aeon-community.medium.com" target="_blank" rel="noopener" title="AEON Community" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/aeonix/aeon" target="_blank" rel="noopener" title="Source Code" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

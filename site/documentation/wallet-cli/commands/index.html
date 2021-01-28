@@ -1,0 +1,2405 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../favicon-32x32.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+    
+    
+      
+        <title>aeon-wallet-cli Documentation (Commands) - Aeon Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:300,400,400i,700%7CCourier&display=fallback">
+        <style>body,input{font-family:"Ubuntu Mono",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Courier",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#wallet-cli" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Aeon Documentation" class="md-header-nav__button md-logo" aria-label="Aeon Documentation">
+      
+  <img src="../../../ae-coin.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Aeon Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              aeon-wallet-cli Documentation (Commands)
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../../aeond/options/" class="md-tabs__link">
+        aeond
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+        
+      
+      <a href="../options/" class="md-tabs__link md-tabs__link--active">
+        Wallet CLI
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../../wallet-rpc/options/" class="md-tabs__link">
+        Wallet RPC
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Aeon Documentation" class="md-nav__button md-logo" aria-label="Aeon Documentation">
+      
+  <img src="../../../ae-coin.svg" alt="logo">
+
+    </a>
+    Aeon Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
+    <label class="md-nav__link" for="nav-1">
+      aeond
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="aeond" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        aeond
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aeond/options/" class="md-nav__link">
+      Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aeond/commands/" class="md-nav__link">
+      Commands
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    <label class="md-nav__link" for="nav-2">
+      Wallet CLI
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Wallet CLI" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Wallet CLI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../options/" class="md-nav__link">
+      Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Commands
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Commands
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account" class="md-nav__link">
+    account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-new" class="md-nav__link">
+    account new
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-switch" class="md-nav__link">
+    account switch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-label" class="md-nav__link">
+    account label
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-tag" class="md-nav__link">
+    account tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-untag" class="md-nav__link">
+    account untag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-tag_description" class="md-nav__link">
+    account tag_description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address" class="md-nav__link">
+    address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address-new" class="md-nav__link">
+    address new
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address-label" class="md-nav__link">
+    address label
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address_book" class="md-nav__link">
+    address_book
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address_book-add" class="md-nav__link">
+    address_book add
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address_book-delete" class="md-nav__link">
+    address_book delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balance" class="md-nav__link">
+    balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bc_height" class="md-nav__link">
+    bc_height
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_reserve_proof" class="md-nav__link">
+    check_reserve_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_spend_proof" class="md-nav__link">
+    check_spend_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_tx_key" class="md-nav__link">
+    check_tx_key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_tx_proof" class="md-nav__link">
+    check_tx_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donate" class="md-nav__link">
+    donate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encrypted_seed" class="md-nav__link">
+    encrypted_seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exchange_multisig_keys" class="md-nav__link">
+    exchange_multisig_keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_key_images" class="md-nav__link">
+    export_key_images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_multisig_info" class="md-nav__link">
+    export_multisig_info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_outputs" class="md-nav__link">
+    export_outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_raw_multisig_tx" class="md-nav__link">
+    export_raw_multisig_tx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_transfers" class="md-nav__link">
+    export_transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finalize_multisig" class="md-nav__link">
+    finalize_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_description" class="md-nav__link">
+    get_description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_reserve_proof" class="md-nav__link">
+    get_reserve_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_spend_proof" class="md-nav__link">
+    get_spend_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_tx_key" class="md-nav__link">
+    get_tx_key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_tx_note" class="md-nav__link">
+    get_tx_note
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_tx_proof" class="md-nav__link">
+    get_tx_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    help
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_key_images" class="md-nav__link">
+    import_key_images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_multisig_info" class="md-nav__link">
+    import_multisig_info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_outputs" class="md-nav__link">
+    import_outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incoming_transfers" class="md-nav__link">
+    incoming_transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrated_address" class="md-nav__link">
+    integrated_address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_output_spent" class="md-nav__link">
+    is_output_spent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locked_sweep_all" class="md-nav__link">
+    locked_sweep_all
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locked_transfer" class="md-nav__link">
+    locked_transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make_multisig" class="md-nav__link">
+    make_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mark_output_spent" class="md-nav__link">
+    mark_output_spent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mark_output_unspent" class="md-nav__link">
+    mark_output_unspent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password" class="md-nav__link">
+    password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment_id" class="md-nav__link">
+    payment_id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payments" class="md-nav__link">
+    payments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare_multisig" class="md-nav__link">
+    prepare_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print_ring" class="md-nav__link">
+    print_ring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh" class="md-nav__link">
+    refresh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rescan_bc" class="md-nav__link">
+    rescan_bc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rescan_spent" class="md-nav__link">
+    rescan_spent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save" class="md-nav__link">
+    save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save_bc" class="md-nav__link">
+    save_bc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save_known_rings" class="md-nav__link">
+    save_known_rings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save_watch_only" class="md-nav__link">
+    save_watch_only
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seed" class="md-nav__link">
+    seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_daemon" class="md-nav__link">
+    set_daemon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_description" class="md-nav__link">
+    set_description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_log" class="md-nav__link">
+    set_log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_ring" class="md-nav__link">
+    set_ring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_tx_key" class="md-nav__link">
+    set_tx_key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_tx_note" class="md-nav__link">
+    set_tx_note
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show_transfer" class="md-nav__link">
+    show_transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show_transfers" class="md-nav__link">
+    show_transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign" class="md-nav__link">
+    sign
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign_multisig" class="md-nav__link">
+    sign_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign_transfer" class="md-nav__link">
+    sign_transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spendkey" class="md-nav__link">
+    spendkey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start_mining" class="md-nav__link">
+    start_mining
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop_mining" class="md-nav__link">
+    stop_mining
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit_multisig" class="md-nav__link">
+    submit_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit_transfer" class="md-nav__link">
+    submit_transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep_all" class="md-nav__link">
+    sweep_all
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep_below" class="md-nav__link">
+    sweep_below
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep_single" class="md-nav__link">
+    sweep_single
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep_unmixable" class="md-nav__link">
+    sweep_unmixable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer" class="md-nav__link">
+    transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unspent_outputs" class="md-nav__link">
+    unspent_outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify" class="md-nav__link">
+    verify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewkey" class="md-nav__link">
+    viewkey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wallet_info" class="md-nav__link">
+    wallet_info
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      Wallet RPC
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Wallet RPC" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Wallet RPC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallet-rpc/options/" class="md-nav__link">
+      Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallet-rpc/commands/" class="md-nav__link">
+      Commands
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account" class="md-nav__link">
+    account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-new" class="md-nav__link">
+    account new
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-switch" class="md-nav__link">
+    account switch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-label" class="md-nav__link">
+    account label
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-tag" class="md-nav__link">
+    account tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-untag" class="md-nav__link">
+    account untag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-tag_description" class="md-nav__link">
+    account tag_description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address" class="md-nav__link">
+    address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address-new" class="md-nav__link">
+    address new
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address-label" class="md-nav__link">
+    address label
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address_book" class="md-nav__link">
+    address_book
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address_book-add" class="md-nav__link">
+    address_book add
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address_book-delete" class="md-nav__link">
+    address_book delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balance" class="md-nav__link">
+    balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bc_height" class="md-nav__link">
+    bc_height
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_reserve_proof" class="md-nav__link">
+    check_reserve_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_spend_proof" class="md-nav__link">
+    check_spend_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_tx_key" class="md-nav__link">
+    check_tx_key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_tx_proof" class="md-nav__link">
+    check_tx_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donate" class="md-nav__link">
+    donate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encrypted_seed" class="md-nav__link">
+    encrypted_seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exchange_multisig_keys" class="md-nav__link">
+    exchange_multisig_keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_key_images" class="md-nav__link">
+    export_key_images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_multisig_info" class="md-nav__link">
+    export_multisig_info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_outputs" class="md-nav__link">
+    export_outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_raw_multisig_tx" class="md-nav__link">
+    export_raw_multisig_tx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export_transfers" class="md-nav__link">
+    export_transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finalize_multisig" class="md-nav__link">
+    finalize_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_description" class="md-nav__link">
+    get_description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_reserve_proof" class="md-nav__link">
+    get_reserve_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_spend_proof" class="md-nav__link">
+    get_spend_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_tx_key" class="md-nav__link">
+    get_tx_key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_tx_note" class="md-nav__link">
+    get_tx_note
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_tx_proof" class="md-nav__link">
+    get_tx_proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    help
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_key_images" class="md-nav__link">
+    import_key_images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_multisig_info" class="md-nav__link">
+    import_multisig_info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_outputs" class="md-nav__link">
+    import_outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incoming_transfers" class="md-nav__link">
+    incoming_transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrated_address" class="md-nav__link">
+    integrated_address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_output_spent" class="md-nav__link">
+    is_output_spent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locked_sweep_all" class="md-nav__link">
+    locked_sweep_all
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locked_transfer" class="md-nav__link">
+    locked_transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make_multisig" class="md-nav__link">
+    make_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mark_output_spent" class="md-nav__link">
+    mark_output_spent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mark_output_unspent" class="md-nav__link">
+    mark_output_unspent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password" class="md-nav__link">
+    password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment_id" class="md-nav__link">
+    payment_id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payments" class="md-nav__link">
+    payments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare_multisig" class="md-nav__link">
+    prepare_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print_ring" class="md-nav__link">
+    print_ring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh" class="md-nav__link">
+    refresh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rescan_bc" class="md-nav__link">
+    rescan_bc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rescan_spent" class="md-nav__link">
+    rescan_spent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save" class="md-nav__link">
+    save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save_bc" class="md-nav__link">
+    save_bc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save_known_rings" class="md-nav__link">
+    save_known_rings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save_watch_only" class="md-nav__link">
+    save_watch_only
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seed" class="md-nav__link">
+    seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_daemon" class="md-nav__link">
+    set_daemon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_description" class="md-nav__link">
+    set_description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_log" class="md-nav__link">
+    set_log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_ring" class="md-nav__link">
+    set_ring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_tx_key" class="md-nav__link">
+    set_tx_key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_tx_note" class="md-nav__link">
+    set_tx_note
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show_transfer" class="md-nav__link">
+    show_transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show_transfers" class="md-nav__link">
+    show_transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign" class="md-nav__link">
+    sign
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign_multisig" class="md-nav__link">
+    sign_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign_transfer" class="md-nav__link">
+    sign_transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spendkey" class="md-nav__link">
+    spendkey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start_mining" class="md-nav__link">
+    start_mining
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop_mining" class="md-nav__link">
+    stop_mining
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit_multisig" class="md-nav__link">
+    submit_multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit_transfer" class="md-nav__link">
+    submit_transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep_all" class="md-nav__link">
+    sweep_all
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep_below" class="md-nav__link">
+    sweep_below
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep_single" class="md-nav__link">
+    sweep_single
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep_unmixable" class="md-nav__link">
+    sweep_unmixable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer" class="md-nav__link">
+    transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unspent_outputs" class="md-nav__link">
+    unspent_outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify" class="md-nav__link">
+    verify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewkey" class="md-nav__link">
+    viewkey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wallet_info" class="md-nav__link">
+    wallet_info
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <p><a class="md-button" href="#"><span class="label_source"></span></a></p>
+<h1 id="wallet-cli">Wallet CLI</h1>
+<h2 id="usage">Usage</h2>
+<p><code>./aeon-wallet-cli [options] [commands]</code></p>
+<h2 id="description">Description</h2>
+<p>This is the command line Aeon wallet. It is the perfect tool to manage aeon
+transfers and addresses. It needs to connect to an Aeon daemon to 
+work correctly.</p>
+<h2 id="commands">Commands</h2>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="account"><code>account</code></h3>
+<p><code>account</code></p>
+<p>Shows all the existing accounts along with their balances.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="account-new"><code>account new</code></h3>
+<p><code>account new &lt;label text with white spaces allowed&gt;</code></p>
+<p>Creates a new account with its label initialized by the provided label text (which can be empty).</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="account-switch"><code>account switch</code></h3>
+<p><code>account switch &lt;index&gt;</code></p>
+<p>Switches to the account specified by <code>&lt;index&gt;</code>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="account-label"><code>account label</code></h3>
+<p><code>account label &lt;index&gt; &lt;label text with white spaces allowed&gt;</code></p>
+<p>Sets the label of the account specified by <index> to the provided label text.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="account-tag"><code>account tag</code></h3>
+<p><code>account tag &lt;tag_name&gt; &lt;account_index_1&gt; [&lt;account_index_2&gt; ...]</code></p>
+<p>A tag <code>&lt;tag_name&gt;</code> is assigned to the specified accounts <code>&lt;account_index_1&gt;</code>, <code>&lt;account_index_2&gt;</code>, ....</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="account-untag"><code>account untag</code></h3>
+<p><code>account untag &lt;account_index_1&gt; [&lt;account_index_2&gt; ...]</code></p>
+<p>The tags assigned to the specified accounts <code>&lt;account_index_1&gt;</code>, <code>&lt;account_index_2&gt;</code> ..., are removed.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="account-tag_description"><code>account tag_description</code></h3>
+<p><code>account tag_description &lt;tag_name&gt; &lt;description&gt;</code></p>
+<p>The tag <code>&lt;tag_name&gt;</code> is assigned an arbitrary text <code>&lt;description&gt;</code>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="address"><code>address</code></h3>
+<p><code>address (&lt;index_min&gt; [&lt;index_max&gt;]|all)</code></p>
+<p>Shows the default or specified address.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="address-new"><code>address new</code></h3>
+<p><code>address new &lt;label text with white spaces allowed&gt;</code></p>
+<p>Creates a new address with the provided label text (which can be empty).</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="address-label"><code>address label</code></h3>
+<p><code>address label &lt;index&gt; &lt;label text with white spaces allowed&gt;</code></p>
+<p>Sets the label of the address specified by <code>&lt;index&gt;</code> to the provided label text.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="address_book"><code>address_book</code></h3>
+<p><code>address_book</code></p>
+<p>Print all saved addresses in local storage.</p>
+<pre><code>&gt;&gt;&gt; address_book
+address_book
+Index: 0
+Address: WmsBWTyNwnbDwjkU1LDTNRaeYK2XNASvHFfHxxxxxxxxxS74f8q3CVwL3RigWN7WTFaFQg6k3SWUFdn2SSaZuidZ2UAyQ9yVo
+Payment ID: &lt;0000000000000000000000000000000000000000000000000000000000000000&gt;
+Description: test
+
+Index: 1
+Address: WmsBWTyNwnbDwjkU1LDTNRaeYK2XNASvHFfHxxxxxxxxxS74f8q3CVwL3RigWN7WTFaFQg6k3SWUFdn2SSaZuidZ2UAyQ9yVo
+Payment ID: &lt;0000000000000000000000000000000000000000000000000000000000000000&gt;
+Description: test
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="address_book-add"><code>address_book add</code></h3>
+<p><code>address_book add ((&lt;address&gt; [pid &lt;id&gt;])|&lt;integrated address&gt;) [&lt;description possibly with whitespaces&gt;]</code></p>
+<p>Add an address to the local address book.</p>
+<pre><code>&gt;&gt;&gt; address_book add WmsBWTyNwnbDwjkU1LDTNRaeYK2XNASvHFfHxxxxxxxxxS74f8q3CVwL3RigWN7WTFaFQg6k3SWUFdn2SSaZuidZ2UAyQ9yVo test
+Index: 0
+Address: WmsBWTyNwnbDwjkU1LDTNRaeYK2XNASvHFfHcYcQgVsqPS74f8q3CVwL3RigWN7WTFaFQg6k3SWUFdn2SSaZuidZ2UAyQ9yVo
+Payment ID: &lt;0000000000000000000000000000000000000000000000000000000000000000&gt;
+Description: test
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="address_book-delete"><code>address_book delete</code></h3>
+<p><code>address_book delete &lt;index&gt;</code></p>
+<p>Delete address at <code>&lt;index&gt;</code>.</p>
+<pre><code>&gt;&gt;&gt;  address_book delete 1
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="balance"><code>balance</code></h3>
+<p><code>balance [detail]</code></p>
+<p>Show the wallet's balance of the currently selected account.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="bc_height"><code>bc_height</code></h3>
+<p><code>bc_height</code></p>
+<p>Prints the connected daemon's height.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="check_reserve_proof"><code>check_reserve_proof</code></h3>
+<p><code>check_reserve_proof &lt;address&gt; &lt;signature_file&gt; [&lt;message&gt;]</code></p>
+<p>Check a signature proving that the owner of <code>&lt;address&gt;</code> holds at least this much, optionally with a challenge string <code>&lt;message&gt;</code>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="check_spend_proof"><code>check_spend_proof</code></h3>
+<p><code>check_spend_proof &lt;txid&gt; &lt;signature_file&gt; [&lt;message&gt;]</code></p>
+<p>Check a signature proving that the signer generated <code>&lt;txid&gt;</code>, optionally with a challenge string <code>&lt;message&gt;</code>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="check_tx_key"><code>check_tx_key</code></h3>
+<p><code>check_tx_key &lt;txid&gt; &lt;txkey&gt; &lt;address&gt;</code></p>
+<p>Check the amount going to <code>&lt;address&gt;</code> in <code>&lt;txid&gt;</code>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="check_tx_proof"><code>check_tx_proof</code></h3>
+<p><code>check_tx_proof &lt;txid&gt; &lt;address&gt; &lt;signature_file&gt; [&lt;message&gt;]</code></p>
+<p>Check the proof for funds going to <code>&lt;address&gt;</code> in <code>&lt;txid&gt;</code> with the challenge string <code>&lt;message&gt;</code> if any.</p>
+<pre><code>&gt;&gt;&gt; check_tx_proof txid WmsxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxVo aeon_tx_proof yes
+Good signature
+WmsxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxVo received 10.000000000 in txid &lt;e2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&gt;
+This transaction has 359 confirmations
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="donate"><code>donate</code></h3>
+<p><code>donate [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] &lt;amount&gt; [&lt;payment_id&gt;]</code></p>
+<p>Donate <code>&lt;amount&gt;</code> to the development team (<code>donate.aeon.cash</code>).</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="encrypted_seed"><code>encrypted_seed</code></h3>
+<p><code>encrypted_seed</code></p>
+<p>Display the encrypted Electrum-style mnemonic seed.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="exchange_multisig_keys"><code>exchange_multisig_keys</code></h3>
+<p><code>exchange_multisig_keys &lt;string&gt; [&lt;string&gt;...]</code></p>
+<p>Performs extra multisig keys exchange rounds. Needed for arbitrary M/N multisig wallets. See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="export_key_images"><code>export_key_images</code></h3>
+<p><code>export_key_images &lt;file&gt;</code></p>
+<p>Export a signed set of key images to a <code>&lt;file&gt;</code>.</p>
+<pre><code>&gt;&gt;&gt; export_key_images key_file
+Wallet password: ***************************
+Signed key images exported to key_file
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="export_multisig_info"><code>export_multisig_info</code></h3>
+<p><code>export_multisig_info &lt;filename&gt;</code></p>
+<p>Export multisig info for other participants. See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="export_outputs"><code>export_outputs</code></h3>
+<p><code>export_outputs &lt;file&gt;</code></p>
+<p>Export the set of outputs owned by this wallet.</p>
+<pre><code>&gt;&gt;&gt; export_outputs file
+Wallet password: ***************************
+Outputs exported to file
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="export_raw_multisig_tx"><code>export_raw_multisig_tx</code></h3>
+<p><code>export_raw_multisig_tx &lt;filename&gt;</code></p>
+<p>Export a signed multisig transaction to a file. See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="export_transfers"><code>export_transfers</code></h3>
+<p><code>export_transfers [in|out|all|pending|failed|coinbase] [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;min_height&gt; [&lt;max_height&gt;]] [output=&lt;filepath&gt;]</code></p>
+<p>Export to CSV the incoming/outgoing transfers within an optional height range.</p>
+<pre><code>&gt;&gt;&gt; export_transfers
+CSV exported to output0.csv
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="finalize_multisig"><code>finalize_multisig</code></h3>
+<p><code>finalize_multisig &lt;string&gt; [&lt;string&gt;...]</code></p>
+<p>Turn this wallet into a multisig wallet, extra step for N-1/N wallets. See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="get_description"><code>get_description</code></h3>
+<p><code>get_description</code></p>
+<p>Get the description of the wallet.</p>
+<pre><code>&gt;&gt;&gt; get_description
+description found: My Favorite Wallet
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="get_reserve_proof"><code>get_reserve_proof</code></h3>
+<p><code>get_reserve_proof (all|&lt;amount&gt;) [&lt;message&gt;]</code></p>
+<p>Generate a signature proving that you own at least this much, optionally with a challenge string <code>&lt;message&gt;</code>.  If <code>all</code> is specified, you prove the entire sum of all of your existing accounts' balances.
+Otherwise, you prove the reserve of the smallest possible amount above <code>&lt;amount&gt;</code> available in your current account.</p>
+<pre><code>&gt;&gt;&gt; get_reserve_proof 10 I-have-ten-coins
+Wallet password: ****************
+signature file saved to: aeon_reserve_proof
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="get_spend_proof"><code>get_spend_proof</code></h3>
+<p><code>get_spend_proof &lt;txid&gt; [&lt;message&gt;]</code></p>
+<p>Generate a signature proving that you generated <code>&lt;txid&gt;</code> using the spend secret key, optionally with a challenge string <code>&lt;message&gt;</code>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="get_tx_key"><code>get_tx_key</code></h3>
+<p><code>get_tx_key &lt;txid&gt;</code></p>
+<p>Get the transaction private key. This can be used to prove coins have been sent but does not prove who sent the transaction. </p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="get_tx_note"><code>get_tx_note</code></h3>
+<p><code>get_tx_note &lt;txid&gt;</code></p>
+<p>Get the note attached to a transaction id.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="get_tx_proof"><code>get_tx_proof</code></h3>
+<p><code>get_tx_proof &lt;txid&gt; &lt;address&gt; [&lt;message&gt;]</code></p>
+<p>Generate a signature proving funds sent to <code>&lt;address&gt;</code> in <code>&lt;txid&gt;</code>, optionally with a challenge string <code>&lt;message&gt;</code>, using either the transaction secret key (when <code>&lt;address&gt;</code> is not your wallet's address) or the view secret key (otherwise), which does not disclose the secret key.</p>
+<pre><code>&gt;&gt;&gt; get_tx_proof e2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx WmsxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxVo yes
+Wallet password: 
+signature file saved to: aeon_tx_proof
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="help"><code>help</code></h3>
+<p><code>help [&lt;command&gt;]</code></p>
+<p>Get documentation information.</p>
+<pre><code>&gt;&gt;&gt; help get_tx_key
+Command usage: 
+  get_tx_key &lt;txid&gt;
+
+Command description: 
+  Get the transaction key (r) for a given &lt;txid&gt;
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="import_key_images"><code>import_key_images</code></h3>
+<p><code>import_key_images &lt;file&gt;</code></p>
+<p>Import a signed key images list and verify their spent status. This could be used to verify a cold wallet balance. </p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="import_multisig_info"><code>import_multisig_info</code></h3>
+<p><code>import_multisig_info &lt;filename&gt; [&lt;filename&gt;...]</code></p>
+<p>Import multisig info from other participants.  See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="import_outputs"><code>import_outputs</code></h3>
+<p><code>import_outputs &lt;file&gt;</code></p>
+<p>Import a set of outputs owned by this wallet. This could be used to load transactions to an offline wallet. </p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="incoming_transfers"><code>incoming_transfers</code></h3>
+<p><code>incoming_transfers [available|unavailable] [verbose] [index=&lt;N1&gt;[,&lt;N2&gt;[,...]]]</code></p>
+<p>Show the incoming transfers, all or filtered by availability and address index.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="integrated_address"><code>integrated_address</code></h3>
+<p><code>integrated_address [&lt;payment_id&gt; | &lt;address&gt;]</code></p>
+<p>Encode a payment ID into an integrated address for the current wallet public address (no argument uses a random payment ID), or decode an integrated address to standard address and payment ID.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="is_output_spent"><code>is_output_spent</code></h3>
+<p><code>is_output_spent &lt;amount&gt;/&lt;key_offset&gt;</code></p>
+<p>Checks whether an output is marked as spent.</p>
+<pre><code>&gt;&gt;&gt; mark_output_spent 500/2657
+&gt;&gt;&gt; is_output_spent 500/2657
+Spent: 500/2657
+&gt;&gt;&gt; mark_output_unspent 500/2657
+&gt;&gt;&gt; is_output_spent 500/2657
+Not spent: 500/2657
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="locked_sweep_all"><code>locked_sweep_all</code></h3>
+<p><code>locked_sweep_all [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] &lt;address&gt; &lt;lockblocks&gt; [&lt;payment_id&gt;]</code></p>
+<p>Send all unlocked balance to an address and lock it for <code>&lt;lockblocks&gt;</code> (max. 1000000). If the parameter <code>index&lt;N1&gt;[,&lt;N2&gt;,...]</code> is specified, the wallet sweeps outputs received by those address indices. <code>&lt;priority&gt;</code> is the priority of the sweep. The higher the priority, the higher the transaction fee. Valid values in priority order (from lowest to highest) are: unimportant, normal, elevated, priority. If omitted, the default value (see the command <code>set priority</code>) is used. <code>&lt;ring_size&gt;</code> is the number of inputs to include for untraceability.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="locked_transfer"><code>locked_transfer</code></h3>
+<p><code>locked_transfer [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] (&lt;URI&gt; | &lt;addr&gt; &lt;amount&gt;) &lt;lockblocks&gt; [&lt;payment_id&gt;]</code></p>
+<p>Transfer <code>&lt;amount&gt;</code> to <code>&lt;address&gt;</code> and lock it for <code>&lt;lockblocks&gt;</code> (max. 1000000). If the parameter <code>index=&lt;N1&gt;[,&lt;N2&gt;,...]</code> is specified, the wallet uses outputs received by addresses of those indices. <code>&lt;priority&gt;</code> is the priority of the transaction. The higher the priority, the higher the transaction fee. Valid values in priority order (from lowest to highest) are: unimportant, normal, elevated, priority. If omitted, the default value (see the command <code>set priority</code>) is used. <code>&lt;ring_size&gt;</code> is the number of inputs to include for untraceability. Multiple payments can be made at once by adding URI_2 or <code>&lt;address_2&gt; &lt;amount_2&gt;</code> etc. (before the payment ID, if it's included).</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="make_multisig"><code>make_multisig</code></h3>
+<p><code>make_multisig &lt;threshold&gt; &lt;string1&gt; [&lt;string&gt;...]</code></p>
+<p>Turn this wallet into a multisig wallet. See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="mark_output_spent"><code>mark_output_spent</code></h3>
+<p><code>mark_output_spent &lt;amount&gt;/&lt;offset&gt; | &lt;filename&gt; [add]</code>
+  Mark output(s) as spent so they never get selected as fake outputs in a ring.</p>
+<pre><code>&gt;&gt;&gt; mark_output_spent 500/2657
+&gt;&gt;&gt; is_output_spent 500/2657
+Spent: 500/2657
+&gt;&gt;&gt; mark_output_unspent 500/2657
+&gt;&gt;&gt; is_output_spent 500/2657
+Not spent: 500/2657
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="mark_output_unspent"><code>mark_output_unspent</code></h3>
+<p><code>mark_output_unspent &lt;amount&gt;/&lt;offset&gt;</code></p>
+<p>Marks an output as unspent so it may get selected as a fake output in a ring.</p>
+<pre><code>&gt;&gt;&gt; mark_output_spent 500/2657
+&gt;&gt;&gt; is_output_spent 500/2657
+Spent: 500/2657
+&gt;&gt;&gt; mark_output_unspent 500/2657
+&gt;&gt;&gt; is_output_spent 500/2657
+Not spent: 500/2657
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="password"><code>password</code></h3>
+<p><code>password</code></p>
+<p>Change the wallet's password.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="payment_id"><code>payment_id</code></h3>
+<p><code>payment_id</code></p>
+<p>Generate a new random full size payment id. These will be unencrypted on the blockchain, see <code>integrated_address</code> for encrypted short payment ids.</p>
+<pre><code>&gt;&gt;&gt; payment_id
+Random payment ID: &lt;3b9c33d3444a1e8f489f9669f0c83cc72a6fef93c5133dfea3401d976dba32ec&gt;
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="payments"><code>payments</code></h3>
+<p><code>payments &lt;PID_1&gt; [&lt;PID_2&gt; ... &lt;PID_N&gt;]</code></p>
+<p>Show the payments for the given payment IDs.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="prepare_multisig"><code>prepare_multisig</code></h3>
+<p><code>prepare_multisig</code></p>
+<p>Export data needed to create a multisig wallet. See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="print_ring"><code>print_ring</code></h3>
+<p><code>print_ring &lt;key_image&gt; | &lt;txid&gt;</code></p>
+<p>Print the ring(s) used to spend a given key image or transaction (if the ring size is &gt; 1).</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="refresh"><code>refresh</code></h3>
+<p><code>refresh</code></p>
+<p>Synchronize with daemon. </p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="rescan_bc"><code>rescan_bc</code></h3>
+<p><code>rescan_bc</code></p>
+<p>Rescan the blockchain from scratch, losing any information which can not be recovered from the blockchain itself.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="rescan_spent"><code>rescan_spent</code></h3>
+<p><code>rescan_spent</code></p>
+<p>Rescan the blockchain for spent outputs.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="save"><code>save</code></h3>
+<p><code>save</code></p>
+<p>Save the wallet data including key images, transaction history, etc.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="save_bc"><code>save_bc</code></h3>
+<p><code>save_bc</code></p>
+<p>Save the current blockchain data.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="save_known_rings"><code>save_known_rings</code></h3>
+<p><code>save_known_rings</code></p>
+<p>Save known rings to the shared rings database</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="save_watch_only"><code>save_watch_only</code></h3>
+<p><code>save_watch_only</code></p>
+<p>Save a watch-only keys file.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="seed"><code>seed</code></h3>
+<p><code>seed</code></p>
+<p>Display the Electrum-style mnemonic seed</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="set"><code>set</code></h3>
+<p><code>set &lt;option&gt; [&lt;value&gt;]</code></p>
+<p>This command is used to set a variety of options in the wallet CLI.</p>
+<p>Available options:</p>
+<ul>
+<li><code>seed language</code> Set the wallet's seed language.</li>
+<li><code>always-confirm-transfers &lt;1|0&gt;</code> Whether to confirm unsplit txes.</li>
+<li><code>print-ring-members &lt;1|0&gt;</code> Whether to print detailed information about ring members during confirmation.</li>
+<li><code>store-tx-info &lt;1|0&gt;</code> Whether to store outgoing tx info (destination address, payment ID, tx secret key) for future reference.</li>
+<li><code>default-ring-size &lt;n&gt;</code> Set the default ring size (obsolete).</li>
+<li><code>auto-refresh &lt;1|0&gt;</code> Whether to automatically synchronize new blocks from the daemon.</li>
+<li><code>refresh-type &lt;full|optimize-coinbase|no-coinbase|default&gt;</code> Set the wallet's refresh behaviour.</li>
+<li><code>priority [0|1|2|3|4]</code> Set the fee to default/unimportant/normal/elevated/priority.</li>
+<li><code>confirm-missing-payment-id &lt;1|0&gt;</code></li>
+<li><code>ask-password &lt;0|1|2   (or never|action|decrypt)&gt;</code></li>
+<li><code>unit &lt;aeon|milliaeon|microaeon|nanoaeon|picoaeon&gt;</code> Set the default aeon (sub-)unit.</li>
+<li><code>min-outputs-count [n]</code> Try to keep at least that many outputs of value at least min-outputs-value.</li>
+<li><code>min-outputs-value [n]</code> Try to keep at least min-outputs-count outputs of at least that value.</li>
+<li><code>merge-destinations &lt;1|0&gt;</code> Whether to merge multiple payments to the same destination address.</li>
+<li><code>confirm-backlog &lt;1|0&gt;</code> Whether to warn if there is transaction backlog.</li>
+<li><code>confirm-backlog-threshold [n]</code> Set a threshold for confirm-backlog to only warn if the transaction backlog is greater than n blocks.</li>
+<li><code>refresh-from-block-height [n]</code> Set the height before which to ignore blocks.</li>
+<li><code>auto-low-priority &lt;1|0&gt;</code> Whether to automatically use the low priority fee level when it's safe to do so.</li>
+<li><code>segregate-pre-fork-outputs &lt;1|0&gt;</code> Set this if you intend to spend outputs on both Aeon AND a key reusing fork.</li>
+<li><code>key-reuse-mitigation2 &lt;1|0&gt;</code> Set this if you are not sure whether you will spend on a key reusing Aeon fork later.</li>
+<li><code>subaddress-lookahead &lt;major&gt;:&lt;minor&gt;</code> Set the lookahead sizes for the subaddress hash table.</li>
+<li><code>segregation-height &lt;n&gt;</code> Set to the height of a key reusing fork you want to use, 0 to use default.</li>
+<li><code>ignore-outputs-above &lt;amount&gt;</code> Ignore outputs of amount above this threshold when spending. Value 0 is translated to the maximum value (18 million) which disables this filter.</li>
+<li><code>ignore-outputs-below &lt;amount&gt;</code> Ignore outputs of amount below this threshold when spending.</li>
+</ul>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="set_daemon"><code>set_daemon</code></h3>
+<p><code>set_daemon &lt;host&gt;[:&lt;port&gt;] [trusted|untrusted]</code></p>
+<p>Set another daemon to connect to.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="set_description"><code>set_description</code></h3>
+<p><code>set_description [free text note]</code></p>
+<pre><code>&gt;&gt;&gt; set_description My Favorite Wallet
+&gt;&gt;&gt; get_description
+description found: My Favortite Wallet
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="set_log"><code>set_log</code></h3>
+<p><code>set_log &lt;level&gt;|{+,-,}&lt;categories&gt;</code></p>
+<p>Aeon source code has five log levels: 0 ERROR, 1 WARN, 2 INFO, 3 DEBUG, 4 TRACE. Each of the higher log levels contains the log levels below them. So for example</p>
+<pre><code>set_log 3
+</code></pre>
+<p>will display levels 0, 1, 2, and 3. To restrict the log to a specific category, you can use the following example</p>
+<pre><code>set_log net.p2p:INFO
+</code></pre>
+<p>This will log all ERROR, WARN, and INFO only for net.p2p. To view all net.p2p logs use <code>net.p2p:TRACE</code> as that will log all lower levels.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="set_ring"><code>set_ring</code></h3>
+<p><code>set_ring &lt;filename&gt; | ( &lt;key_image&gt; absolute|relative &lt;index&gt; [&lt;index&gt;...] )</code></p>
+<p>Set the ring used for a given key image, so it can be reused in a fork.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="set_tx_key"><code>set_tx_key</code></h3>
+<p><code>set_tx_key &lt;txid&gt; &lt;tx_key&gt;</code></p>
+<p>Set the transaction key <code>r</code> for a given <code>&lt;txid&gt;</code> in case the tx was made by some other device or 3rd party wallet.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="set_tx_note"><code>set_tx_note</code></h3>
+<p><code>set_tx_note &lt;txid&gt; [free text note]</code></p>
+<p>Set an arbitrary string note for a <code>&lt;txid&gt;</code>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="show_transfer"><code>show_transfer</code></h3>
+<p><code>show_transfer &lt;txid&gt;</code></p>
+<p>Show information about a transfer to/from this address.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="show_transfers"><code>show_transfers</code></h3>
+<p><code>show_transfers [in|out|pending|failed|pool|coinbase] [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;min_height&gt; [&lt;max_height&gt;]]</code></p>
+<p>Show the incoming/outgoing transfers within an optional height range.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="sign"><code>sign</code></h3>
+<p><code>sign &lt;file&gt;</code></p>
+<p>Sign the contents of a file.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="sign_multisig"><code>sign_multisig</code></h3>
+<p><code>sign_multisig &lt;filename&gt;</code></p>
+<p>Sign a multisig transaction from a file. See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="sign_transfer"><code>sign_transfer</code></h3>
+<p><code>sign_transfer [export_raw]</code></p>
+<p>Sign a transaction from a file. If the parameter "export_raw" is specified, transaction raw hex data suitable for the daemon RPC /sendrawtransaction is exported.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="spendkey"><code>spendkey</code></h3>
+<p><code>spendkey</code></p>
+<p>Display the private spend key.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="start_mining"><code>start_mining</code></h3>
+<p><code>start_mining [&lt;number_of_threads&gt;] [bg_mining] [ignore_battery]</code></p>
+<p>Start mining thread. </p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="status"><code>status</code></h3>
+<p><code>status</code></p>
+<p>Show synchronization status</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="stop_mining"><code>stop_mining</code></h3>
+<p><code>stop_mining</code></p>
+<p>Kills mining threads.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="submit_multisig"><code>submit_multisig</code></h3>
+<p><code>submit_multisig &lt;filename&gt;</code></p>
+<p>Submit a signed multisig transaction from a file</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="submit_transfer"><code>submit_transfer</code></h3>
+<p><code>submit_transfer</code></p>
+<p>Submit a signed transaction from a file.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="sweep_all"><code>sweep_all</code></h3>
+<p><code>sweep_all [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] &lt;address&gt; [&lt;payment_id&gt;]</code></p>
+<p>Send all unlocked balance to an address.  If the parameter <code>index&lt;N1&gt;[,&lt;N2&gt;,...]</code> is specified, the wallet sweeps outputs received by those address indices. If omitted, the wallet sweeps outputs received by all address indices.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="sweep_below"><code>sweep_below</code></h3>
+<p><code>sweep_below &lt;amount_threshold&gt; [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] &lt;address&gt; [&lt;payment_id&gt;]</code></p>
+<p>Send all unlocked outputs below an amount to an address. If the parameter <code>index&lt;N1&gt;[,&lt;N2&gt;,...]</code> is specified, the wallet sweeps outputs received by those address indices. If omitted, the wallet sweeps outputs received by all address indices.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="sweep_single"><code>sweep_single</code></h3>
+<p><code>sweep_single [&lt;priority&gt;] [&lt;ring_size&gt;] &lt;key_image&gt; &lt;address&gt; [&lt;payment_id&gt;]</code></p>
+<p>Send a single output to an address. </p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="sweep_unmixable"><code>sweep_unmixable</code></h3>
+<p><code>sweep_unmixable</code></p>
+<p>Send all unmixable outputs to yourself with ring_size 1</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="transfer"><code>transfer</code></h3>
+<p><code>transfer [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] (&lt;URI&gt; | &lt;address&gt; &lt;amount&gt;) [&lt;payment_id&gt;]</code></p>
+<p>Transfer <code>&lt;amount&gt;</code> to <code>&lt;address&gt;</code>. If the parameter <code>index=&lt;N1&gt;[,&lt;N2&gt;,...]</code> is specified, the wallet uses outputs received by addresses of those indices. <code>&lt;priority&gt;</code> is the priority of the transaction. The higher the priority, the higher the transaction fee. Valid values in priority order (from lowest to highest) are: unimportant, normal, elevated, priority. If omitted, the default value (see the command <code>set priority</code>) is used. <code>&lt;ring_size&gt;</code> is the number of inputs to include for untraceability. Multiple payments can be made at once by adding URI_2 or <code>&lt;address_2&gt; &lt;amount_2&gt;</code> etc. (before the payment ID, if it's included)</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="unspent_outputs"><code>unspent_outputs</code></h3>
+<p><code>unspent_outputs [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;min_amount&gt; [&lt;max_amount&gt;]]</code></p>
+<p>Show the unspent outputs of a specified address within an optional amount range.</p>
+<pre><code>[wallet WXXXX]: unspent_outputs
+
+Amount: 0.000000010000, number of keys: 2
+124698 129240 
+
+...
+
+...
+
+Amount: 2000.000000000000, number of keys: 1
+129626 
+
+Min block height: 124698
+Max block height: 129240
+Min amount found: 0.000000010000
+Max amount found: 2000.000000000000
+Total count: ###
+
+Bin size: ....
+Outputs per *: 2.9
+count
+  ^
+  |                                   *              |
+  |                                   *              |
+  |                                   *              |
+  |                                   *              |
+  |                                   *              |
+  |                                   *              |
+  |                                *  *     *        |
+  |       *                        *  **    *        |
+  |*  *   *                        *  **    *    ** *|
+  |*  *   *      *  * *      *     *  **   **  * ** *|
+  +--------------------------------------------------+--&gt; block height
+   ^                                                ^
+  124698                                          129240
+
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="verify"><code>verify</code></h3>
+<p><code>verify &lt;filename&gt; &lt;address&gt; &lt;signature&gt;</code></p>
+<p>Verify a signature on the contents of a file.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="version"><code>version</code></h3>
+<p><code>version</code></p>
+<p>Returns version information</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="viewkey"><code>viewkey</code></h3>
+<p><code>viewkey</code></p>
+<p>Display the private view key.</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="wallet_info"><code>wallet_info</code></h3>
+<p><code>wallet_info</code></p>
+<p>Show the wallet's information.</p>
+<hr />
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../options/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Options
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../wallet-rpc/options/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Options
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright 2020 aeon.wiki. <br> Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. <br>You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">apache.org</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://twitter.com/AeonCommunity" target="_blank" rel="noopener" title="\@AeonCommunity" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://aeon-community.medium.com" target="_blank" rel="noopener" title="AEON Community" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/aeonix/aeon" target="_blank" rel="noopener" title="Source Code" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
